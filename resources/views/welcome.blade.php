@@ -16,7 +16,7 @@
         rel="stylesheet"
     />
 </head>
-<body class="">
+<body class="flex flex-col min-h-screen">
 <section class="bg-[#0177ff]">
     <header class="container mx-auto lg:py-8 py-2 px-4 lg:px-0">
         <div class="flex items-center justify-between">
@@ -331,7 +331,7 @@
         </div>
     </div>
 </section>
-<footer class="py-2 px-3 bg-[#0177ff] text-white font-semibold text-sm">
+<footer class="py-2 px-3 bg-[#0177ff] text-white font-semibold text-sm mt-auto">
     <div class="container mx-auto">
         <div class="flex items-center justify-between pb-3 border-b border-white">
             <p><a href="">Home</a> > <a href="">Recipe Food Nutrition</a></p>
