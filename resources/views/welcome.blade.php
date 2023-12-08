@@ -51,7 +51,7 @@
                 </li>
                 <li>
                     <a href=""
-                    ><img class="w-24" src="./view/img/logo.png" alt=""
+                    ><img class="w-24" src="{{asset ('img/logo.png')}}" alt=""
                         /></a>
                 </li>
                 <li>
@@ -228,7 +228,7 @@
             class="lg:w-1/3 bg-white shadow-lg border-l-2 border-t-2 border-r-4 border-b-4 border-black rounded-xl py-5 px-7"
         >
             <div class="flex items-start gap-4">
-                <img src="./view/img/dribble.png" alt="" />
+                <img src="{{asset ('/img/dribble.png')}}" alt="" />
                 <div>
                     <h3 class="font-semibold text-lg">Dribble</h3>
                     <p class="text-gray-500 text-sm">
@@ -263,7 +263,7 @@
             class="lg:w-1/3 bg-white shadow-lg border-l-2 border-t-2 border-r-4 border-b-4 border-black rounded-xl py-5 px-7"
         >
             <div class="flex items-start gap-4">
-                <img src="./view/img/soundcloud.png" alt="" />
+                <img src="{{asset ('/img/soundcloud.png')}}" alt="" />
                 <div>
                     <h3 class="font-semibold text-lg">SoundCloud</h3>
                     <p class="text-gray-500 text-sm">
@@ -298,7 +298,7 @@
             class="lg:w-1/3 bg-white shadow-lg border-l-2 border-t-2 border-r-4 border-b-4 border-black rounded-xl py-5 px-7"
         >
             <div class="flex items-start gap-4">
-                <img src="./view/img/github.png" alt="" />
+                <img src="{{asset ('/img/github.png')}}" alt="" />
                 <div>
                     <h3 class="font-semibold text-lg">GitHub</h3>
                     <p class="text-gray-500 text-sm">

@@ -21,103 +21,105 @@
     />
 </head>
 <body class="flex flex-col min-h-screen">
-    <header class="py-4 px-8 bg-gray-800">
-      <div class="flex items-center justify-between">
-        <img class="w-[120px]" src="./view/img/logo.png" alt="" />
-        <ul class="lg:flex items-center gap-5 hidden">
-          <li>
-            <a
-              href=""
-              class="text-gray-300 text-sm hover:text-white hover:underline underline-offset-4 decoration-white transition-all"
-              >Create Team</a
-            >
-          </li>
-          <li>
-            <a
-              href=""
-              class="text-gray-300 text-sm hover:text-white hover:underline underline-offset-4 decoration-white transition-all"
-              >Add Your API</a
-            >
-          </li>
-          <li>
-            <a
-              href=""
-              class="text-gray-300 text-sm hover:text-white hover:underline underline-offset-4 decoration-white transition-all"
-              >Docs</a
-            >
-          </li>
-          <li>
-            <a
-              href=""
-              class="text-gray-300 text-sm hover:text-white hover:underline underline-offset-4 decoration-white transition-all"
-              >Log In</a
-            >
-          </li>
-          <li>
-            <a href="" class="text-white text-sm py-2 px-2 bg-blue-700 rounded"
-              >Sign Up</a
-            >
-          </li>
-        </ul>
-        <div
-          class="lg:flex items-center justify-between py-1 px-2 rounded bg-gray-600 hidden"
-        >
-          <input
-            type="search"
-            placeholder="Search for API's"
-            class="bg-inherit focus:outline-none text-white text-xs"
-          />
-          <i class="ri-search-line text-white"></i>
-        </div>
-        <button
-          id="menu-toggle"
-          class="py-1 px-2 border border-gray-400 rounded-lg lg:hidden block"
-        >
-          <i class="ri-menu-line text-white"></i>
-        </button>
-      </div>
-      <div id="mobile-menu" class="menu">
-        <div class="bg-gray-900 text-white text-lg h-full w-72 p-8">
-          <span id="close-btn" class="close-btn">&times;</span>
-          <a href="index.html"
-            ><img class="w-2/3 my-4" src="./view/img/logo.png" alt=""
-          /></a>
-          <ul class="text-gray-400 text-base space-y-2">
-            <li class="pt-1"><a href="#" class="">Create Team</a></li>
-            <li class="pt-1"><a href="#">Add Your API</a></li>
-            <li class="pt-1"><a href="#">Docs</a></li>
-            <li class="pt-1 border-b border-gray-400"></li>
-            <li class="pt-1"><a href="#" class="">Log In</a></li>
-            <li class="pt-1">
-              <button class="bg-blue-700 rounded w-full text-white py-1">
-                Sign Up
-              </button>
-            </li>
-            <li class="pt-1 border-b border-gray-400"></li>
-            <li class="pt-1">
-              <div
-                class="flex items-center justify-between py-1 px-2 rounded bg-gray-600"
+    <header class="bg-[#0177ff] lg:py-4 py-2 px-4 lg:px-0">
+        <div class="flex items-center justify-between container mx-auto">
+            <div class="bg-white py-1.5 px-3 rounded-2xl border border-gray-500">
+                <div class="flex items-center gap-2">
+              <span
+                  class="rounded-full bg-[#da522e] py-0.5 px-2.5 text-white font-bold"
+              >P</span
               >
-                <input
-                  type="search"
-                  placeholder="Search for API's"
-                  class="bg-inherit focus:outline-none text-white text-xs"
-                />
-                <i class="ri-search-line text-white"></i>
-              </div>
-            </li>
-          </ul>
+                    <div>
+                        <h3 class="text-xs font-extralight text-[#da522e]">
+                            PRODUCT HUNT
+                        </h3>
+                        <p class="text-xs text-[#da522e]">#1 Product of the day</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="lg:flex items-center gap-5 hidden">
+                <li>
+                    <a
+                        href=""
+                        class="text-white font-light hover:underline underline-offset-4 decoration-white transition-all"
+                    >About us</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href=""
+                        class="text-white font-light hover:underline underline-offset-4 decoration-white transition-all"
+                    >Contact us</a
+                    >
+                </li>
+                <li>
+                    <a href=""
+                    ><img class="w-24" src="{{asset ('img/logo.png')}}" alt=""
+                        /></a>
+                </li>
+                <li>
+                    <a
+                        href=""
+                        class="text-white font-light hover:underline underline-offset-4 decoration-white transition-all"
+                    >Tutorials</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href=""
+                        class="text-white font-light hover:underline underline-offset-4 decoration-white transition-all"
+                    >Work with us</a
+                    >
+                </li>
+            </ul>
+            <button
+                class="bg-white py-2 px-6 rounded-2xl border-t-2 border-l-2 border-b-4 border-r-4 border-black hidden lg:block"
+            >
+                Add Your API
+            </button>
+            <button id="menu-toggle"
+                    class="py-1 px-2 border border-white rounded-lg lg:hidden block"
+            >
+                <i class="ri-menu-line text-white"></i>
+            </button>
         </div>
-      </div>
+        <div id="mobile-menu" class="menu">
+            <div class="bg-[#0177ff] text-white text-lg h-full w-72 p-8">
+                <span id="close-btn" class="close-btn">&times;</span>
+                <a href="index.html"><img class="w-2/3 my-4" src="./view/img/logo.png" alt="" /></a>
+                <ul class="text-white text-base space-y-2">
+                    <li class="pt-1"><a href="#" class="">Create Team</a></li>
+                    <li class="pt-1"><a href="#">Add Your API</a></li>
+                    <li class="pt-1"><a href="#">Docs</a></li>
+                    <li class="pt-1 border-b border-gray-400"></li>
+                    <li class="pt-1"><a href="#" class="">Log In</a></li>
+                    <li class="pt-1"><button class="bg-blue-700 rounded w-full text-white py-1">Sign Up</button></li>
+                    <li class="pt-1 border-b border-gray-400"></li>
+                    <li class="pt-1">
+                        <div
+                            class="flex items-center justify-between py-1 px-2 rounded bg-blue-600"
+                        >
+                            <input
+                                type="search"
+                                placeholder="Search for API's"
+                                class="bg-inherit focus:outline-none text-white text-xs"
+                            />
+                            <i class="ri-search-line text-white"></i>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
     </header>
-    <section class="pt-6">
+    <section class="pt-6 bg-[#0177ff]">
       <div
-        class="flex flex-col lg:flex-row items-center justify-between border-b border-gray-600 pb-4 px-14"
+        class="flex flex-col lg:flex-row items-center justify-between border-b border-white pb-4 px-14"
       >
         <div class="flex flex-col lg:flex-row items-center gap-3">
           <img
             class="lg:w-16 w-10 lg:h-16 h-10"
-            src="./view/img/pp2.png"
+            src="{{asset ('/img/pp2.png')}}"
             alt=""
           />
           <h1 class="lg:text-2xl text-lg text-white lg:hidden block">
@@ -149,19 +151,19 @@
               By
               <a
                 href=""
-                class="text-blue-500 hover:text-blue-700 hover:underline underline-offset-4 decoration-blue-700 transition-all"
+                class="text-gray-200 hover:text-blue-700 hover:underline underline-offset-4 decoration-blue-700 transition-all"
                 >Davıd</a
               >
               | Updated a year ago |
               <a
                 href=""
-                class="text-blue-500 hover:text-blue-700 hover:underline underline-offset-4 decoration-blue-700 transition-all"
+                class="text-gray-200 hover:text-blue-700 hover:underline underline-offset-4 decoration-blue-700 transition-all"
                 >Food</a
               >
               | Featured in
               <a
                 href=""
-                class="text-blue-500 hover:text-blue-700 hover:underline underline-offset-4 decoration-blue-700 transition-all"
+                class="text-gray-200 hover:text-blue-700 hover:underline underline-offset-4 decoration-blue-700 transition-all"
                 >Food & Restaurant</a
               >
             </p>
@@ -170,28 +172,28 @@
         <div
           class="lg:flex grid grid-cols-2 lg:gap-0 gap-2 items-center py-3 lg:py-0"
         >
-          <div class="border-r border-gray-600 px-3 space-y-1">
+          <div class="border-r border-white px-3 space-y-1">
             <div class="text-white text-sm lg:text-base whitespace-nowrap">
               <i class="ri-line-chart-line ri-lg"></i>
               <span>Popularity</span>
             </div>
             <p class="text-white text-2xl text-center">9.9 / 10</p>
           </div>
-          <div class="border-r border-gray-600 px-3 space-y-1">
+          <div class="border-r border-white px-3 space-y-1">
             <div class="text-white text-sm lg:text-base whitespace-nowrap">
               <i class="ri-time-line ri-lg"></i>
               <span>Latency</span>
             </div>
             <p class="text-white text-2xl text-center">454ms</p>
           </div>
-          <div class="border-r border-gray-600 px-3 space-y-1">
+          <div class="border-r border-white px-3 space-y-1">
             <div class="text-white text-sm lg:text-base whitespace-nowrap">
               <i class="ri-check-line ri-lg"></i>
               <span>Service Level</span>
             </div>
             <p class="text-white text-2xl text-center">100%</p>
           </div>
-          <div class="border-r border-gray-600 lg:border-0 px-3 space-y-1">
+          <div class="border-r border-white lg:border-0 px-3 space-y-1">
             <div class="text-white text-sm lg:text-base whitespace-nowrap">
               <i class="ri-add-line ri-lg"></i>
               <span>Health Check</span>
@@ -202,35 +204,35 @@
       </div>
       <div class="pt-2">
         <div
-          class="flex items-center justify-center gap-5 tab-menu border-b border-gray-600 px-14 overflow-x-scroll"
+          class="flex items-center justify-center gap-5 tab-menu border-b border-white px-14 overflow-x-scroll"
         >
           <a
             href="#tab1"
-            class="text-sm text-blue-500 hover:text-blue-700 transition-all pb-2 border-b-2 border-blue-500"
+            class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2 border-b-2 border-blue-500"
           >
             Endpoints
           </a>
           <a
             href="#tab2"
-            class="text-sm text-blue-500 hover:text-blue-700 transition-all pb-2"
+            class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2"
           >
             About
           </a>
           <a
             href="#tab3"
-            class="text-sm text-blue-500 hover:text-blue-700 transition-all pb-2"
+            class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2"
           >
             Tutorials
           </a>
           <a
             href="#tab4"
-            class="text-sm text-blue-500 hover:text-blue-700 transition-all pb-2"
+            class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2"
           >
             Discussions
           </a>
           <a
             href="#tab5"
-            class="text-sm text-blue-500 hover:text-blue-700 transition-all pb-2"
+            class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2"
           >
             Pricing
           </a>
@@ -241,39 +243,39 @@
               The spoonacular Recipe - Food - Nutrition API gives you to access
               to thousands of recipes, storeboug
             </p>
-            <div class="bg-gray-800 pt-4 mt-2 border-b border-gray-600">
-              <div class="px-4 border-b border-gray-600 pb-2">
+            <div class="bg-white pt-4 mt-2 border-b border-black">
+              <div class="px-4 border-b border-black pb-2">
                 <select
                   name=""
                   id=""
                   disabled
-                  class="bg-gray-600 px-2 pr-20 py-1 rounded-lg border border-gray-500 text-gray-800"
+                  class="bg-gray-200 px-2 pr-20 py-1 rounded-lg border border-gray-500 text-gray-900"
                 >
                   <option value="">V1 (Current)</option>
                 </select>
               </div>
               <div class="lg:flex">
                 <div
-                  class="lg:w-1/3 border-r border-white h-[450px] overflow-y-scroll"
+                  class="lg:w-1/3 border-r border-blue-600 h-[450px] overflow-y-scroll"
                 >
-                  <div class="py-3 border-b border-gray-600">
+                  <div class="py-3 border-b border-black">
                     <div
-                      class="lg:flex items-center justify-between py-1 px-2 rounded bg-gray-600 hidden mx-4"
+                      class="lg:flex items-center justify-between py-1 px-2 rounded bg-gray-200 hidden mx-4"
                     >
                       <input
                         type="search"
                         placeholder="Search Endpoints"
-                        class="bg-inherit focus:outline-none text-white text-xs w-full"
+                        class="bg-inherit focus:outline-none text-gray-900 text-xs w-full"
                       />
-                      <i class="ri-search-line text-white"></i>
+                      <i class="ri-search-line text-gray-900"></i>
                     </div>
                   </div>
-                  <div x-data="{selected:1}" class="text-white">
+                  <div x-data="{selected:1}" class="text-gray-900">
                     <ul class="">
-                      <li class="relative border-b border-gray-600">
+                      <li class="relative border-b border-black">
                         <button
                           type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-gray-600"
+                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
                           @click="selected !== 1 ? selected = 1 : selected = null"
                         >
                           <div class="flex items-center justify-between">
@@ -289,28 +291,28 @@
                           x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
                         >
                           <div
-                            class="px-4 pb-2 flex items-start justify-start flex-col text-sm bg-gray-900"
+                            class="px-4 pb-2 flex items-start justify-start flex-col text-sm"
                           >
                             <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
+                              class="w-full text-left py-2 px-1 rounded-lg transition-all"
                             >
                               <span class="text-xs text-green-600">GET</span>
                               Search Recipes
                             </button>
                             <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
+                              class="w-full text-left py-2 px-1 rounded-lg transition-all"
                             >
                               <span class="text-xs text-green-600">GET</span>
                               Search Recipes
                             </button>
                             <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
+                              class="w-full text-left py-2 px-1 rounded-lg transition-all"
                             >
                               <span class="text-xs text-green-600">GET</span>
                               Search Recipes
                             </button>
                             <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
+                              class="w-full text-left py-2 px-1 rounded-lg transition-all"
                             >
                               <span class="text-xs text-blue-600">POST</span>
                               Search Recipes
@@ -319,10 +321,10 @@
                         </div>
                       </li>
 
-                      <li class="relative border-b border-gray-600">
+                      <li class="relative border-b border-black">
                         <button
                           type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-gray-600"
+                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
                           @click="selected !== 2 ? selected = 2 : selected = null"
                         >
                           <div class="flex items-center justify-between">
@@ -338,28 +340,28 @@
                           x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
                         >
                           <div
-                            class="px-4 pb-2 flex items-start justify-start flex-col text-sm bg-gray-900"
+                            class="px-4 pb-2 flex items-start justify-start flex-col text-sm"
                           >
                             <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
+                              class="w-full text-left py-2 px-1 rounded-lg transition-all"
                             >
                               <span class="text-xs text-green-600">GET</span>
                               Search Recipes
                             </button>
                             <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
+                              class="w-full text-left py-2 px-1 rounded-lg transition-all"
                             >
                               <span class="text-xs text-green-600">GET</span>
                               Search Recipes
                             </button>
                             <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
+                              class="w-full text-left py-2 px-1 rounded-lg transition-all"
                             >
                               <span class="text-xs text-green-600">GET</span>
                               Search Recipes
                             </button>
                             <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
+                              class="w-full text-left py-2 px-1 rounded-lg transition-all"
                             >
                               <span class="text-xs text-blue-600">POST</span>
                               Search Recipes
@@ -367,10 +369,10 @@
                           </div>
                         </div>
                       </li>
-                      <li class="relative border-b border-gray-600">
+                      <li class="relative border-b border-black">
                         <button
                           type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-gray-600"
+                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
                           @click="selected !== 3 ? selected = 3 : selected = null"
                         >
                           <div class="flex items-center justify-between">
@@ -385,40 +387,40 @@
                           x-ref="container3"
                           x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
                         >
-                          <div
-                            class="px-4 pb-2 flex items-start justify-start flex-col text-sm bg-gray-900"
-                          >
-                            <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-green-600">GET</span>
-                              Search Recipes
-                            </button>
-                            <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-green-600">GET</span>
-                              Search Recipes
-                            </button>
-                            <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-green-600">GET</span>
-                              Search Recipes
-                            </button>
-                            <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-blue-600">POST</span>
-                              Search Recipes
-                            </button>
-                          </div>
+                        <div
+                        class="px-4 pb-2 flex items-start justify-start flex-col text-sm"
+                      >
+                        <button
+                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                        >
+                          <span class="text-xs text-green-600">GET</span>
+                          Search Recipes
+                        </button>
+                        <button
+                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                        >
+                          <span class="text-xs text-green-600">GET</span>
+                          Search Recipes
+                        </button>
+                        <button
+                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                        >
+                          <span class="text-xs text-green-600">GET</span>
+                          Search Recipes
+                        </button>
+                        <button
+                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                        >
+                          <span class="text-xs text-blue-600">POST</span>
+                          Search Recipes
+                        </button>
+                      </div>
                         </div>
                       </li>
-                      <li class="relative border-b border-gray-600">
+                      <li class="relative border-b border-black">
                         <button
                           type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-gray-600"
+                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
                           @click="selected !== 4 ? selected = 4 : selected = null"
                         >
                           <div class="flex items-center justify-between">
@@ -433,40 +435,40 @@
                           x-ref="container4"
                           x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''"
                         >
-                          <div
-                            class="px-4 pb-2 flex items-start justify-start flex-col text-sm bg-gray-900"
-                          >
-                            <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-green-600">GET</span>
-                              Search Recipes
-                            </button>
-                            <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-green-600">GET</span>
-                              Search Recipes
-                            </button>
-                            <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-green-600">GET</span>
-                              Search Recipes
-                            </button>
-                            <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-blue-600">POST</span>
-                              Search Recipes
-                            </button>
-                          </div>
+                        <div
+                        class="px-4 pb-2 flex items-start justify-start flex-col text-sm"
+                      >
+                        <button
+                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                        >
+                          <span class="text-xs text-green-600">GET</span>
+                          Search Recipes
+                        </button>
+                        <button
+                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                        >
+                          <span class="text-xs text-green-600">GET</span>
+                          Search Recipes
+                        </button>
+                        <button
+                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                        >
+                          <span class="text-xs text-green-600">GET</span>
+                          Search Recipes
+                        </button>
+                        <button
+                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                        >
+                          <span class="text-xs text-blue-600">POST</span>
+                          Search Recipes
+                        </button>
+                      </div>
                         </div>
                       </li>
-                      <li class="relative border-b border-gray-600">
+                      <li class="relative border-b border-black">
                         <button
                           type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-gray-600"
+                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
                           @click="selected !== 5 ? selected = 5 : selected = null"
                         >
                           <div class="flex items-center justify-between">
@@ -481,49 +483,49 @@
                           x-ref="container5"
                           x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''"
                         >
-                          <div
-                            class="px-4 pb-2 flex items-start justify-start flex-col text-sm bg-gray-900"
-                          >
-                            <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-green-600">GET</span>
-                              Search Recipes
-                            </button>
-                            <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-green-600">GET</span>
-                              Search Recipes
-                            </button>
-                            <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-green-600">GET</span>
-                              Search Recipes
-                            </button>
-                            <button
-                              class="hover:bg-gray-900 w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-blue-600">POST</span>
-                              Search Recipes
-                            </button>
-                          </div>
+                        <div
+                        class="px-4 pb-2 flex items-start justify-start flex-col text-sm"
+                      >
+                        <button
+                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                        >
+                          <span class="text-xs text-green-600">GET</span>
+                          Search Recipes
+                        </button>
+                        <button
+                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                        >
+                          <span class="text-xs text-green-600">GET</span>
+                          Search Recipes
+                        </button>
+                        <button
+                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                        >
+                          <span class="text-xs text-green-600">GET</span>
+                          Search Recipes
+                        </button>
+                        <button
+                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                        >
+                          <span class="text-xs text-blue-600">POST</span>
+                          Search Recipes
+                        </button>
+                      </div>
                         </div>
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div
-                  class="lg:w-1/3 border-r border-white h-[450px] overflow-y-scroll"
+                  class="lg:w-1/3 border-r border-blue-600 h-[450px] overflow-y-scroll"
                 >
                   <div
-                    class="py-3 border-b border-t lg:border-t-0 border-gray-600 px-5"
+                    class="py-3 border-b border-t lg:border-t-0 border-black px-5"
                   >
                     <div class="flex items-center justify-between">
                       <div>
                         <span class="text-green-600">GET</span>
-                        <span class="text-white text-sm">Search Recipes</span>
+                        <span class="text-gray-900 text-sm">Search Recipes</span>
                       </div>
                       <button
                         class="text-white py-[5.5px] px-3 text-sm bg-blue-600 rounded-lg"
@@ -533,9 +535,9 @@
                       </button>
                     </div>
                   </div>
-                  <div class="py-2 bg-gray-900 border-b border-gray-600">
+                  <div class="py-2 border-b border-black">
                     <div class="px-5">
-                      <p class="text-white">
+                      <p class="text-gray-900">
                         Search through thousands of recipes using advanced
                         filtering and ranking. NOTE: Since this method combines
                         searching by query, by ingredients, and by nutrients
@@ -543,10 +545,10 @@
                       </p>
                     </div>
                   </div>
-                  <div class="py-2 bg-gray-900 border-b border-gray-600">
+                  <div class="py-2 border-b border-black">
                     <div class="px-5 pb-5 flex items-start gap-16 w-full">
                       <h3
-                        class="text-white font-light text-sm whitespace-nowrap"
+                        class="text-gray-900 font-light text-sm whitespace-nowrap"
                       >
                         Request URL
                       </h3>
@@ -554,7 +556,7 @@
                         <select
                           name=""
                           id=""
-                          class="border rounded-lg border-gray-600 py-1 px-2 w-full bg-gray-600 text-gray-200"
+                          class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900"
                         >
                           <option value="">rapidapi.com</option>
                         </select>
@@ -564,12 +566,12 @@
                       </div>
                     </div>
                   </div>
-                  <div x-data="{selected:0}" class="text-white">
+                  <div x-data="{selected:0}" class="text-gray-900">
                     <ul class="">
-                      <li class="relative border-b border-gray-600">
+                      <li class="relative border-b border-black">
                         <button
                           type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-gray-600"
+                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
                           @click="selected !== 1 ? selected = 1 : selected = null"
                         >
                           <div class="flex items-center justify-between">
@@ -584,16 +586,16 @@
                           x-ref="container1"
                           x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
                         >
-                          <div class="py-2 bg-gray-900">
+                          <div class="py-2">
                             <div class="px-5 flex items-start gap-16 w-full">
                               <div>
                                 <h3
-                                  class="text-white font-light text-sm whitespace-nowrap"
+                                  class="text-gray-900 font-light text-sm whitespace-nowrap"
                                 >
                                   Request URL
                                 </h3>
                                 <h5
-                                  class="text-gray-400 pt-1 font-light text-sm"
+                                  class="text-gray-600 pt-1 font-light text-sm"
                                 >
                                   STRING
                                 </h5>
@@ -602,7 +604,7 @@
                                 <select
                                   name=""
                                   id=""
-                                  class="border rounded-lg border-gray-600 py-1 px-2 w-full bg-gray-600 text-gray-200"
+                                  class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900"
                                 >
                                   <option value="">rapidapi.com</option>
                                 </select>
@@ -613,19 +615,19 @@
                             </div>
                           </div>
                           <div
-                            class="py-2 bg-gray-900 border-b border-gray-600"
+                            class="py-2 border-b border-black"
                           >
                             <div
                               class="px-5 pb-5 flex items-start gap-16 w-full"
                             >
                               <div>
                                 <h3
-                                  class="text-white font-light text-sm whitespace-nowrap"
+                                  class="text-gray-900 font-light text-sm whitespace-nowrap"
                                 >
                                   Request URL
                                 </h3>
                                 <h5
-                                  class="text-gray-400 pt-1 font-light text-sm"
+                                  class="text-gray-600 pt-1 font-light text-sm"
                                 >
                                   STRING
                                 </h5>
@@ -636,7 +638,7 @@
                                   disabled
                                   placeholder=""
                                   value="spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
-                                  class="border rounded-lg border-gray-600 py-1 px-2 w-full bg-gray-600 text-gray-200 text-sm"
+                                  class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900 text-sm"
                                 />
                                 <h4 class="text-blue-600 font-light text-sm">
                                   REQUIRED
@@ -647,10 +649,10 @@
                         </div>
                       </li>
 
-                      <li class="relative border-b border-gray-600">
+                      <li class="relative border-b border-black">
                         <button
                           type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-gray-600"
+                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
                           @click="selected !== 2 ? selected = 2 : selected = null"
                         >
                           <div class="flex items-center justify-between">
@@ -665,16 +667,16 @@
                           x-ref="container2"
                           x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
                         >
-                          <div class="py-2 bg-gray-900">
+                          <div class="py-2">
                             <div class="px-5 flex items-start gap-16 w-full">
                               <div>
                                 <h3
-                                  class="text-white font-light text-sm whitespace-nowrap"
+                                  class="text-gray-900 font-light text-sm whitespace-nowrap"
                                 >
                                   Request URL
                                 </h3>
                                 <h5
-                                  class="text-gray-400 pt-1 font-light text-sm"
+                                  class="text-gray-600 pt-1 font-light text-sm"
                                 >
                                   STRING
                                 </h5>
@@ -683,7 +685,7 @@
                                 <select
                                   name=""
                                   id=""
-                                  class="border rounded-lg border-gray-600 py-1 px-2 w-full bg-gray-600 text-gray-200"
+                                  class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900"
                                 >
                                   <option value="">rapidapi.com</option>
                                 </select>
@@ -691,7 +693,7 @@
                                   <h4 class="text-blue-600 font-light text-sm">
                                     REQUIRED
                                   </h4>
-                                  <p class="text-xs text-white">
+                                  <p class="text-xs text-gray-900">
                                     The cuisine(s) of the recipes. One or more
                                     (comma separated) of the following: african,
                                     chinese, japanese, korean, vietnamese, thai,
@@ -706,19 +708,19 @@
                             </div>
                           </div>
                           <div
-                            class="py-2 bg-gray-900 border-b border-gray-600"
+                            class="py-2 border-b border-black"
                           >
                             <div
                               class="px-5 pb-5 flex items-start gap-16 w-full"
                             >
                               <div>
                                 <h3
-                                  class="text-white font-light text-sm whitespace-nowrap"
+                                  class="text-gray-900 font-light text-sm whitespace-nowrap"
                                 >
                                   Request URL
                                 </h3>
                                 <h5
-                                  class="text-gray-400 pt-1 font-light text-sm"
+                                  class="text-gray-700 pt-1 font-light text-sm"
                                 >
                                   STRING
                                 </h5>
@@ -729,7 +731,7 @@
                                   disabled
                                   placeholder=""
                                   value="spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
-                                  class="border rounded-lg border-gray-600 py-1 px-2 w-full bg-gray-600 text-gray-200 text-sm"
+                                  class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900 text-sm"
                                 />
                                 <h4 class="text-blue-600 font-light text-sm">
                                   REQUIRED
@@ -739,10 +741,10 @@
                           </div>
                         </div>
                       </li>
-                      <li class="relative border-b border-gray-600">
+                      <li class="relative border-b border-black">
                         <button
                           type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-gray-600"
+                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
                           @click="selected !== 3 ? selected = 3 : selected = null"
                         >
                           <div class="flex items-center justify-between">
@@ -757,16 +759,16 @@
                           x-ref="container3"
                           x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
                         >
-                          <div class="py-2 bg-gray-900">
+                        <div class="py-2">
                             <div class="px-5 flex items-start gap-16 w-full">
                               <div>
                                 <h3
-                                  class="text-white font-light text-sm whitespace-nowrap"
+                                  class="text-gray-900 font-light text-sm whitespace-nowrap"
                                 >
                                   Request URL
                                 </h3>
                                 <h5
-                                  class="text-gray-400 pt-1 font-light text-sm"
+                                  class="text-gray-600 pt-1 font-light text-sm"
                                 >
                                   STRING
                                 </h5>
@@ -775,7 +777,7 @@
                                 <select
                                   name=""
                                   id=""
-                                  class="border rounded-lg border-gray-600 py-1 px-2 w-full bg-gray-600 text-gray-200"
+                                  class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900"
                                 >
                                   <option value="">rapidapi.com</option>
                                 </select>
@@ -783,7 +785,7 @@
                                   <h4 class="text-blue-600 font-light text-sm">
                                     REQUIRED
                                   </h4>
-                                  <p class="text-xs text-white">
+                                  <p class="text-xs text-gray-900">
                                     The cuisine(s) of the recipes. One or more
                                     (comma separated) of the following: african,
                                     chinese, japanese, korean, vietnamese, thai,
@@ -798,19 +800,19 @@
                             </div>
                           </div>
                           <div
-                            class="py-2 bg-gray-900 border-b border-gray-600"
+                            class="py-2 border-b border-black"
                           >
                             <div
                               class="px-5 pb-5 flex items-start gap-16 w-full"
                             >
                               <div>
                                 <h3
-                                  class="text-white font-light text-sm whitespace-nowrap"
+                                  class="text-gray-900 font-light text-sm whitespace-nowrap"
                                 >
                                   Request URL
                                 </h3>
                                 <h5
-                                  class="text-gray-400 pt-1 font-light text-sm"
+                                  class="text-gray-700 pt-1 font-light text-sm"
                                 >
                                   STRING
                                 </h5>
@@ -821,7 +823,7 @@
                                   disabled
                                   placeholder=""
                                   value="spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
-                                  class="border rounded-lg border-gray-600 py-1 px-2 w-full bg-gray-600 text-gray-200 text-sm"
+                                  class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900 text-sm"
                                 />
                                 <h4 class="text-blue-600 font-light text-sm">
                                   REQUIRED
@@ -831,10 +833,10 @@
                           </div>
                         </div>
                       </li>
-                      <li class="relative border-b border-gray-600">
+                      <li class="relative border-b border-black">
                         <button
                           type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-gray-600"
+                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
                           @click="selected !== 5 ? selected = 5 : selected = null"
                         >
                           <div class="flex items-center justify-between">
@@ -849,16 +851,16 @@
                           x-ref="container5"
                           x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''"
                         >
-                          <div class="py-2 bg-gray-900">
+                        <div class="py-2">
                             <div class="px-5 flex items-start gap-16 w-full">
                               <div>
                                 <h3
-                                  class="text-white font-light text-sm whitespace-nowrap"
+                                  class="text-gray-900 font-light text-sm whitespace-nowrap"
                                 >
                                   Request URL
                                 </h3>
                                 <h5
-                                  class="text-gray-400 pt-1 font-light text-sm"
+                                  class="text-gray-600 pt-1 font-light text-sm"
                                 >
                                   STRING
                                 </h5>
@@ -867,7 +869,7 @@
                                 <select
                                   name=""
                                   id=""
-                                  class="border rounded-lg border-gray-600 py-1 px-2 w-full bg-gray-600 text-gray-200"
+                                  class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900"
                                 >
                                   <option value="">rapidapi.com</option>
                                 </select>
@@ -875,7 +877,7 @@
                                   <h4 class="text-blue-600 font-light text-sm">
                                     REQUIRED
                                   </h4>
-                                  <p class="text-xs text-white">
+                                  <p class="text-xs text-gray-900">
                                     The cuisine(s) of the recipes. One or more
                                     (comma separated) of the following: african,
                                     chinese, japanese, korean, vietnamese, thai,
@@ -890,19 +892,19 @@
                             </div>
                           </div>
                           <div
-                            class="py-2 bg-gray-900 border-b border-gray-600"
+                            class="py-2 border-b border-black"
                           >
                             <div
                               class="px-5 pb-5 flex items-start gap-16 w-full"
                             >
                               <div>
                                 <h3
-                                  class="text-white font-light text-sm whitespace-nowrap"
+                                  class="text-gray-900 font-light text-sm whitespace-nowrap"
                                 >
                                   Request URL
                                 </h3>
                                 <h5
-                                  class="text-gray-400 pt-1 font-light text-sm"
+                                  class="text-gray-700 pt-1 font-light text-sm"
                                 >
                                   STRING
                                 </h5>
@@ -913,7 +915,7 @@
                                   disabled
                                   placeholder=""
                                   value="spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
-                                  class="border rounded-lg border-gray-600 py-1 px-2 w-full bg-gray-600 text-gray-200 text-sm"
+                                  class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900 text-sm"
                                 />
                                 <h4 class="text-blue-600 font-light text-sm">
                                   REQUIRED
@@ -927,31 +929,31 @@
                   </div>
                 </div>
                 <div
-                  class="lg:w-1/3 border-r border-white h-[450px] overflow-y-scroll"
+                  class="lg:w-1/3 border-r border-blue-600 h-[450px] overflow-y-scroll"
                 >
                   <div
-                    class="pt-3 border-b border-t lg:border-t-0 border-gray-600 px-5"
+                    class="pt-[18px] border-b border-t lg:border-t-0 border-black px-5"
                   >
                     <div class="flex items-center gap-5">
                       <a
                         href=""
-                        class="text-sm text-blue-500 hover:text-blue-700 transition-all pb-2 border-b-2 border-blue-500"
+                        class="text-sm text-gray-900 hover:text-blue-700 transition-all pb-4 border-b-2 border-blue-500"
                       >
                         Code Snippets
                       </a>
                       <a
                         href=""
-                        class="text-sm text-gray-600 hover:text-blue-700 transition-all pb-2"
+                        class="text-sm text-gray-600 hover:text-blue-700 transition-all pb-4"
                       >
                         Results
                       </a>
                     </div>
                   </div>
-                  <div class="flex items-center gap-4 bg-gray-900 px-5 pt-4">
+                  <div class="flex items-center gap-4 px-5 pt-4">
                     <select
                       name=""
                       id=""
-                      class="border rounded-lg border-gray-600 py-1 px-2 bg-gray-600 text-gray-200 w-52 text-xs"
+                      class="border rounded-lg border-black py-1 px-2 bg-gray-200 text-gray-900 w-52 text-xs"
                     >
                       <option value="">(Node.js) Axios</option>
                     </select>
@@ -1736,102 +1738,36 @@
         </div>
       </div>
     </section>
-    <footer class="w-full bg-gray-800 py-8">
-      <div class="md:px-12 lg:px-28">
-        <div class="container m-auto space-y-6 text-white">
-          <img src="./view/img/logo.png" alt="logo" class="m-auto w-40" />
-          <ul
-            role="list"
-            class="flex flex-col items-center justify-center gap-4 py-4 sm:flex-row sm:gap-8"
-          >
-            <li role="listitem">
-              <a href="#" class="hover:text-primary">Home</a>
-            </li>
-            <li role="listitem">
-              <a href="#" class="hover:text-primary">About</a>
-            </li>
-            <li role="listitem">
-              <a href="#" class="hover:text-primary">Blog</a>
-            </li>
-            <li role="listitem">
-              <a href="#" class="hover:text-primary">Learn</a>
-            </li>
-            <li role="listitem">
-              <a href="#" class="hover:text-primary">Careers</a>
-            </li>
-            <li role="listitem">
-              <a href="#" class="hover:text-primary">Preess</a>
-            </li>
-            <li role="listitem">
-              <a href="#" class="hover:text-primary">Contact</a>
-            </li>
-            <li role="listitem">
-              <a href="#" class="hover:text-primary">Terms</a>
-            </li>
-            <li role="listitem">
-              <a href="#" class="hover:text-primary">Privacy</a>
-            </li>
-          </ul>
-          <div class="m-auto flex w-max items-center justify-between space-x-4">
-            <a href="tel:+243996660436" aria-label="call">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="m-auto w-5"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
-                ></path>
-              </svg>
-            </a>
-            <a href="mailto:hello@mail.com" aria-label="send mail">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="m-auto w-5"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"
-                ></path>
-              </svg>
-            </a>
-            <a href="#" title="facebook" target="blank" aria-label="facebook">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="m-auto w-5"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
-                ></path>
-              </svg>
-            </a>
-            <a href="#" title="linkedin" target="blank" aria-label="linkedin">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="m-auto w-5"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
-                ></path>
-              </svg>
-            </a>
-          </div>
-
-          <div class="text-center">
-            <span class="text-sm tracking-wide"
-              >Copyright © RapidAPI <span id="year"></span> | All right
-              reserved</span
-            >
-          </div>
+    <footer class="py-2 px-3 bg-[#0177ff] text-white font-semibold text-sm mt-auto">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between pb-3 border-b border-white">
+                <p><a href="">Home</a> > <a href="">Recipe Food Nutrition</a></p>
+                <div>
+                    <span>Language:</span>
+                    <select name="" id="" class="bg-inherit">
+                        <option value="">English</option>
+                        <option value="">Turkish</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center justify-between pt-2">
+                <div class="flex flex-col lg:flex-row items-center lg:gap-8 gap-2">
+                    <p>© 2023 APIWIZZ. All Right Reserved.</p>
+                    <ul class="flex flex-wrap items-center gap-3">
+                        <li><a href="">About</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Learn</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Press</a></li>
+                    </ul>
+                </div>
+                <div class="flex items-center gap-3 lg:py-0 py-2">
+                    <a href="" class="py-1 px-2 rounded-full bg-white"><i class="ri-facebook-fill text-black"></i></a>
+                    <a href="" class="py-1 px-2 rounded-full bg-white"><i class="ri-twitter-fill text-black"></i></a>
+                    <a href="" class="py-1 px-2 rounded-full bg-white"><i class="ri-linkedin-fill text-black"></i></a>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
     @vite('resources/js/jquery.min.js')
     @vite('resources/js/swiper-bundle.min.js')
