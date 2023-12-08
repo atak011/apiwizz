@@ -129,7 +129,7 @@
             </div>
         </div>
         <div
-            class="w-[1050px] h-1 border-b-4 border-dashed border-black absolute top-20 left-14 hidden lg:block"
+            class="w-11/12 h-1 border-b-4 border-dashed border-black absolute top-20 left-14 hidden lg:block"
         ></div>
         <div
             class="rounded-full w-[250px] h-[250px] bg-gradient-to-r from-[#020ea0] via-[#0b50cd] to-[#1063e5] relative hidden lg:block"

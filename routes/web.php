@@ -23,5 +23,5 @@ Route::get('/login', function () {
 });
 
 Route::get('/product-detail', function () {
-    return view('login');
+    return view('product-detail');
 });
