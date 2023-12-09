@@ -362,8 +362,11 @@
         </div>
     </div>
 </footer>
-<script src="./view/js/jquery.min.js"></script>
-<script src="./view/js/swiper-bundle.min.js"></script>
-<script src="./view/js/main.js"></script>
+<script src="{{asset ('resources/js/jquery.min.js')}}"></script>
+<script src="{{asset ('resources/js/swiper-bundle.min.js')}}"></script>
+<script src="{{asset ('resources/js/main.js')}}"></script>
+    @vite('resources/js/jquery.min.js')
+    @vite('resources/js/swiper-bundle.min.js')
+    @vite('resources/js/main.js')
 </body>
 </html>

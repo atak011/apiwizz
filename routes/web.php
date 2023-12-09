@@ -25,3 +25,7 @@ Route::get('/login', function () {
 Route::get('/product-detail', function () {
     return view('product-detail');
 });
+
+Route::get('/user-panel', function () {
+    return view('user-panel');
+});

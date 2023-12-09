@@ -1769,10 +1769,10 @@
             </div>
         </div>
     </footer>
-    @vite('resources/js/jquery.min.js')
-    @vite('resources/js/swiper-bundle.min.js')
+    @vite('/resources/js/jquery.min.js')
+    @vite('/resources/js/swiper-bundle.min.js')
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
-    @vite('resources/js/main.js')
+    @vite('/resources/js/main.js')
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
     <script>
