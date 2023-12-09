@@ -16,10 +16,9 @@
         rel="stylesheet"
     />
 </head>
-<body class="">
-<section class="bg-[#0177ff]">
-    <header class="container mx-auto lg:py-8 py-2 px-4 lg:px-0">
-        <div class="flex items-center justify-between">
+<body class="bg-gray-200">
+    <header class="bg-[#0177ff] lg:py-4 py-2 px-4 lg:px-0">
+        <div class="flex items-center justify-between container mx-auto">
             <div class="bg-white py-1.5 px-3 rounded-2xl border border-gray-500">
                 <div class="flex items-center gap-2">
               <span
@@ -51,7 +50,7 @@
                 </li>
                 <li>
                     <a href=""
-                    ><img class="w-24" src="./view/img/logo.png" alt=""
+                    ><img class="w-24" src="{{asset ('img/logo.png')}}" alt=""
                         /></a>
                 </li>
                 <li>
@@ -109,228 +108,65 @@
             </div>
         </div>
     </header>
-    <div
-        class="container mx-auto flex flex-col lg:flex-row items-center justify-between lg:py-14 py-2 px-4 lg:px-0 relative"
-    >
-        <div class="flex items-center justify-between w-screen px-4 lg:hidden">
+    <div class="lg:min-h-screen py-10 flex flex-col justify-center sm:py-12">
+        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
             <div
-                class="rounded-full w-[80px] h-[80px] bg-gradient-to-r from-[#020ea0] via-[#0b50cd] to-[#1063e5] relative lg:hidden block"
-            >
-                <div class="absolute top-1 left-[17px]">
-                    <i class="ri-database-2-fill ri-3x text-white"></i>
+                class="absolute inset-0 bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+            </div>
+            <div class="text-white relative px-4 py-10 bg-[#0177ff] shadow-lg sm:rounded-3xl sm:p-20">
+    
+                <div class="text-center pb-6">
+                    <h1 class="text-3xl">Login</h1>
+    
+                    <p class="text-gray-300">
+                        Welcome Back!
+                    </p>
                 </div>
-            </div>
-            <div
-                class="rounded-full w-[80px] h-[80px] bg-gradient-to-r from-[#020ea0] via-[#0b50cd] to-[#1063e5] relative lg:hidden block"
-            >
-                <div class="absolute top-1 left-[17px]">
-                    <i class="ri-database-2-fill ri-3x text-white"></i>
+                <a href="#" class="flex items-center justify-center mb-5 bg-white text-white rounded-lg shadow-md hover:bg-gray-100">
+                    <div class="px-4 py-3">
+                        <svg class="h-6 w-6" viewBox="0 0 40 40">
+                            <path
+                                d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.045 27.2142 24.3525 30 20 30C14.4775 30 10 25.5225 10 20C10 14.4775 14.4775 9.99999 20 9.99999C22.5492 9.99999 24.8683 10.9617 26.6342 12.5325L31.3483 7.81833C28.3717 5.04416 24.39 3.33333 20 3.33333C10.7958 3.33333 3.33335 10.7958 3.33335 20C3.33335 29.2042 10.7958 36.6667 20 36.6667C29.2042 36.6667 36.6667 29.2042 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z"
+                                fill="#FFC107" />
+                            <path
+                                d="M5.25497 12.2425L10.7308 16.2583C12.2125 12.59 15.8008 9.99999 20 9.99999C22.5491 9.99999 24.8683 10.9617 26.6341 12.5325L31.3483 7.81833C28.3716 5.04416 24.39 3.33333 20 3.33333C13.5983 3.33333 8.04663 6.94749 5.25497 12.2425Z"
+                                fill="#FF3D00" />
+                            <path
+                                d="M20 36.6667C24.305 36.6667 28.2167 35.0192 31.1742 32.34L26.0159 27.975C24.3425 29.2425 22.2625 30 20 30C15.665 30 11.9842 27.2359 10.5975 23.3784L5.16254 27.5659C7.92087 32.9634 13.5225 36.6667 20 36.6667Z"
+                                fill="#4CAF50" />
+                            <path
+                                d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.7592 25.1975 27.56 26.805 26.0133 27.9758C26.0142 27.975 26.015 27.975 26.0158 27.9742L31.1742 32.3392C30.8092 32.6708 36.6667 28.3333 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z"
+                                fill="#1976D2" />
+                        </svg>
+                    </div>
+                    <h1 class="px-4 py-3 w-5/6 text-center text-gray-600 font-bold">Sign in with Google</h1>
+                </a>
+                <div class="mt-4 mb-4 flex items-center justify-between">
+                    <span class="border-b w-1/5 lg:w-1/4"></span>
+                    <a href="#" class="text-xs text-center text-white uppercase">or login with email</a>
+                    <span class="border-b w-1/5 lg:w-1/4"></span>
                 </div>
-            </div>
-        </div>
-        <div
-            class="w-[1050px] h-1 border-b-4 border-dashed border-black absolute top-20 left-14 hidden lg:block"
-        ></div>
-        <div
-            class="rounded-full w-[250px] h-[250px] bg-gradient-to-r from-[#020ea0] via-[#0b50cd] to-[#1063e5] relative hidden lg:block"
-        >
-            <div class="absolute top-8 left-16 z-[99999]">
-                <i class="ri-database-2-fill ri-8x text-white"></i>
-            </div>
-        </div>
-        <div class="text-center relative lg:top-28 top-7">
-            <h1 class="text-white text-4xl font-bold">
-                A Curated List For The Public APIs
-            </h1>
-            <p class="mt-4 lg:w-[500px] text-white font-light text-sm">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea culpa
-                voluptatum odio omnis enim vero dignissimos hic, praesentium odit
-                nulla architecto excepturi impedit commodi
-            </p>
-            <div
-                class="flex items-center justify-between bg-white rounded-3xl py-2 px-3 border-t-2 border-l-2 border-r-4 border-b-4 border-black mt-8 shadow-lg"
-            >
-                <div class="flex items-center gap-2">
-                    <i class="ri-search-line ri-xl"></i>
+                <form>
+    
                     <input
-                        type="text"
-                        class="w-full focus:outline-none text-black bg-inherit py-1"
-                        placeholder="Search 3200+ free APIs"
-                    />
-                </div>
-                <i class="ri-mic-fill ri-xl"></i>
-            </div>
-        </div>
-        <div
-            class="rounded-full w-[250px] h-[250px] bg-gradient-to-r from-[#1063e5] via-[#0b50cd] to-[#020ea0] relative hidden lg:block"
-        >
-            <div class="absolute top-8 left-16 z-[99999]">
-                <i class="ri-database-2-fill ri-8x text-white"></i>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="container mx-auto py-16">
-    <div class="flex flex-wrap items-center justify-center gap-3">
-        <button
-            class="border-l-2 border-t-2 border-r-4 border-b-4 border-black bg-white rounded-3xl py-1.5 px-3 flex items-center gap-3 shadow-lg"
-        >
-            <i class="ri-cloud-fill ri-lg"></i>
-            <h2 class="font-semibold whitespace-nowrap">
-                Weather <span>(34)</span>
-            </h2>
-        </button>
-        <button
-            class="border-l-2 border-t-2 border-r-4 border-b-4 border-black bg-white rounded-3xl py-1.5 px-3 flex items-center gap-3 shadow-lg"
-        >
-            <i class="ri-book-2-fill ri-lg"></i>
-            <h2 class="font-semibold whitespace-nowrap">
-                Books <span>(22)</span>
-            </h2>
-        </button>
-        <button
-            class="border-l-2 border-t-2 border-r-4 border-b-4 border-black bg-white rounded-3xl py-1.5 px-3 flex items-center gap-3 shadow-lg"
-        >
-            <i class="ri-login-circle-line ri-lg"></i>
-            <h2 class="font-semibold whitespace-nowrap">
-                Login And Authentication <span>(12)</span>
-            </h2>
-        </button>
-        <button
-            class="border-l-2 border-t-2 border-r-4 border-b-4 border-black bg-white rounded-3xl py-1.5 px-3 flex items-center gap-3 shadow-lg"
-        >
-            <i class="ri-film-fill ri-lg"></i>
-            <h2 class="font-semibold whitespace-nowrap">
-                Movie <span>(12)</span>
-            </h2>
-        </button>
-    </div>
-    <div class="flex items-center justify-center gap-3 py-2">
-        <button
-            class="border-l-2 border-t-2 border-r-4 border-b-4 border-black bg-white rounded-3xl py-1.5 px-3 flex items-center gap-3 shadow-lg"
-        >
-            <i class="ri-mail-fill ri-lg"></i>
-            <h2 class="font-semibold whitespace-nowrap">
-                Email <span>(12)</span>
-            </h2>
-        </button>
-        <button
-            class="border-l-2 border-t-2 border-r-4 border-b-4 border-black bg-white rounded-3xl py-1.5 px-3 flex items-center gap-3 shadow-lg"
-        >
-            <i class="ri-calendar-2-fill ri-lg"></i>
-            <h2 class="font-semibold whitespace-nowrap">
-                Calendar <span>(22)</span>
-            </h2>
-        </button>
-    </div>
-    <div class="flex flex-col lg:flex-row items-center justify-center gap-5 pt-6 px-3 lg:px-0">
-        <div
-            class="lg:w-1/3 bg-white shadow-lg border-l-2 border-t-2 border-r-4 border-b-4 border-black rounded-xl py-5 px-7"
-        >
-            <div class="flex items-start gap-4">
-                <img src="./view/img/dribble.png" alt="" />
-                <div>
-                    <h3 class="font-semibold text-lg">Dribble</h3>
-                    <p class="text-gray-500 text-sm">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                    <div class="flex items-center gap-4 py-2">
-                <span
-                    class="py-1 px-2 bg-gray-200 rounded-xl text-xs font-semibold"
-                >
-                  HTTPS
-                </span>
-                        <span
-                            class="py-1 px-2 bg-gray-200 rounded-xl text-xs font-semibold"
-                        >
-                  Auth: OAuth
-                </span>
+                            class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            type="mail" placeholder="E-Mail" name="name">
+    
+                    <input
+                            class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            type="password" placeholder="Password" name="email">
+    
+                    <div class="flex justify-center">
+                        <input
+                            class="shadow bg-white text-gray-900 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type="submit" value="Login">
+                       
                     </div>
-                </div>
-            </div>
-            <div class="flex items-center justify-center gap-8 pt-4">
-                <button class="text-blue-600 font-semibold whitespace-nowrap text-xs lg:text-base">
-                    API Documentation
-                </button>
-                <button
-                    class="shadow-lg border-l-2 border-t-2 border-r-4 border-b-4 border-black rounded-xl bg-blue-600 text-white py-2 px-4 whitespace-nowrap text-xs lg:text-base"
-                >
-                    Register Your App
-                </button>
-            </div>
-        </div>
-        <div
-            class="lg:w-1/3 bg-white shadow-lg border-l-2 border-t-2 border-r-4 border-b-4 border-black rounded-xl py-5 px-7"
-        >
-            <div class="flex items-start gap-4">
-                <img src="./view/img/soundcloud.png" alt="" />
-                <div>
-                    <h3 class="font-semibold text-lg">SoundCloud</h3>
-                    <p class="text-gray-500 text-sm">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                    <div class="flex items-center gap-4 py-2">
-                <span
-                    class="py-1 px-2 bg-gray-200 rounded-xl text-xs font-semibold"
-                >
-                  HTTPS
-                </span>
-                        <span
-                            class="py-1 px-2 bg-gray-200 rounded-xl text-xs font-semibold"
-                        >
-                  Auth: OAuth
-                </span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex items-center justify-center gap-8 pt-4">
-                <button class="text-blue-600 font-semibold whitespace-nowrap text-xs lg:text-base">
-                    API Documentation
-                </button>
-                <button
-                    class="shadow-lg border-l-2 border-t-2 border-r-4 border-b-4 border-black rounded-xl bg-blue-600 text-white py-2 px-4 whitespace-nowrap text-xs lg:text-base"
-                >
-                    Register Your App
-                </button>
-            </div>
-        </div>
-        <div
-            class="lg:w-1/3 bg-white shadow-lg border-l-2 border-t-2 border-r-4 border-b-4 border-black rounded-xl py-5 px-7"
-        >
-            <div class="flex items-start gap-4">
-                <img src="./view/img/github.png" alt="" />
-                <div>
-                    <h3 class="font-semibold text-lg">GitHub</h3>
-                    <p class="text-gray-500 text-sm">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                    <div class="flex items-center gap-4 py-2">
-                <span
-                    class="py-1 px-2 bg-gray-200 rounded-xl text-xs font-semibold"
-                >
-                  HTTPS
-                </span>
-                        <span
-                            class="py-1 px-2 bg-gray-200 rounded-xl text-xs font-semibold"
-                        >
-                  Auth: OAuth
-                </span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex items-center justify-center gap-8 pt-4">
-                <button class="text-blue-600 font-semibold whitespace-nowrap text-xs lg:text-base">
-                    API Documentation
-                </button>
-                <button
-                    class="shadow-lg border-l-2 border-t-2 border-r-4 border-b-4 border-black rounded-xl bg-blue-600 text-white py-2 px-4 whitespace-nowrap text-xs lg:text-base"
-                >
-                    Register Your App
-                </button>
+    
+                </form>
             </div>
         </div>
     </div>
-</section>
 <footer class="py-2 px-3 bg-[#0177ff] text-white font-semibold text-sm">
     <div class="container mx-auto">
         <div class="flex items-center justify-between pb-3 border-b border-white">
