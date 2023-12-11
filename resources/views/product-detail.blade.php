@@ -1084,12 +1084,12 @@
               </div>
             </div>
           </div>
-          <div class="w-full hidden py-2" id="tab5">
+          <div class="w-full hidden py-2 bg-white" id="tab5">
             <div>
-              <h3 class="text-white text-2xl font-light text-center pt-6">
+              <h3 class="text-gray-900 text-2xl font-light text-center pt-6">
                 Choose the Right Plan For You
               </h3>
-              <p class="text-white text-sm font-light text-center">
+              <p class="text-gray-900 text-sm font-light text-center">
                 RapidAPI partners directly with API providers to give you
                 no-fuss, transparent pricing. Find a plan that best matches the
                 <br />
@@ -1647,24 +1647,24 @@
               </div>
             </div>
             <div class="py-4">
-              <h3 class="text-white text-2xl font-light text-center pt-6">
+              <h3 class="text-gray-900 text-2xl font-light text-center pt-6">
                 Frequently Asked Questions
               </h3>
               <div class="flex flex-col items-center justify-center pt-2 gap-3 px-4">
                 <div>
-                  <h4 class="text-sm text-white font-semibold">
+                  <h4 class="text-sm text-gray-900 font-semibold">
                     Is my payment information secure?
                   </h4>
-                  <p class="text-xs text-white font-light lg:w-[800px]">
+                  <p class="text-xs text-gray-900 font-light lg:w-[800px]">
                     Credit cards are processed through a PCI compliant banking
                     partner.
                   </p>
                 </div>
                 <div>
-                  <h4 class="text-sm text-white font-semibold">
+                  <h4 class="text-sm text-gray-900 font-semibold">
                     Is my payment information secure?
                   </h4>
-                  <p class="text-xs text-white font-light lg:w-[800px]">
+                  <p class="text-xs text-gray-900 font-light lg:w-[800px]">
                     We work directly with API providers to implement clear,
                     transparent pricing for developers. The Provider may require
                     a credit card if a plan has a quota with an overage fee. If
@@ -1674,28 +1674,28 @@
                   </p>
                 </div>
                 <div>
-                  <h4 class="text-sm text-white font-semibold">
+                  <h4 class="text-sm text-gray-900 font-semibold">
                     What if I exceed my plan limits?
                   </h4>
-                  <p class="text-xs text-white font-light lg:w-[800px]">
+                  <p class="text-xs text-gray-900 font-light lg:w-[800px]">
                     Depending on your plan's specification, you will either
                     incur overage charges or be suspended.
                   </p>
                 </div>
                 <div>
-                  <h4 class="text-sm text-white font-semibold">
+                  <h4 class="text-sm text-gray-900 font-semibold">
                     What if I exceed my plan limits?
                   </h4>
-                  <p class="text-xs text-white font-light lg:w-[800px]">
+                  <p class="text-xs text-gray-900 font-light lg:w-[800px]">
                     Depending on your plan's specification, you will either
                     incur overage charges or be suspended.
                   </p>
                 </div>
                 <div>
-                  <h4 class="text-sm text-white font-semibold">
+                  <h4 class="text-sm text-gray-900 font-semibold">
                     What if I exceed my plan limits?
                   </h4>
-                  <p class="text-xs text-white font-light lg:w-[800px]">
+                  <p class="text-xs text-gray-900 font-light lg:w-[800px]">
                     Depending on your plan's specification, you will either
                     incur overage charges or be suspended.
                   </p>
@@ -1703,10 +1703,10 @@
               </div>
             </div>
             <div>
-              <h3 class="text-white text-2xl font-light text-center pt-6">
+              <h3 class="text-gray-900 text-2xl font-light text-center pt-6">
                 A Proven Platform With Scale
               </h3>
-              <p class="text-white text-sm font-light text-center">
+              <p class="text-gray-900 text-sm font-light text-center">
                 Starting with the Recipe - Food - Nutrition API - you have
                 access to an extensive ecosystem to accelerate your <br />
                 development process
@@ -1715,23 +1715,23 @@
             <div class="grid lg:grid-cols-4 grid-cols-2">
               <div class="flex flex-col items-center justify-center">
                 <i class="ri-user-3-fill ri-4x text-blue-600"></i>
-                <h5 class="text-white text-2xl font-light -mt-4">300.000</h5>
-                <p class="text-white text-center font-light text-sm">Developers</p>
+                <h5 class="text-gray-900 text-2xl font-light -mt-4">300.000</h5>
+                <p class="text-gray-900 text-center font-light text-sm">Developers</p>
               </div>
               <div class="flex flex-col items-center justify-center">
                 <i class="ri-organization-chart ri-4x text-blue-600"></i>
-                <h5 class="text-white text-2xl font-light -mt-4">Thousands</h5>
-                <p class="text-white text-center font-light text-sm">of Public APIs</p>
+                <h5 class="text-gray-900 text-2xl font-light -mt-4">Thousands</h5>
+                <p class="text-gray-900 text-center font-light text-sm">of Public APIs</p>
               </div>
               <div class="flex flex-col items-center justify-center">
                 <i class="ri-phone-fill ri-4x text-blue-600"></i>
-                <h5 class="text-white text-2xl font-light -mt-4">Billions</h5>
-                <p class="text-white text-center font-light text-sm">of API Calls / Month</p>
+                <h5 class="text-gray-900 text-2xl font-light -mt-4">Billions</h5>
+                <p class="text-gray-900 text-center font-light text-sm">of API Calls / Month</p>
               </div>
               <div class="flex flex-col items-center justify-center">
                 <i class="ri-earth-fill ri-4x text-blue-600"></i>
-                <h5 class="text-white text-2xl font-light -mt-4">175</h5>
-                <p class="text-white text-center font-light text-sm">Countries served</p>
+                <h5 class="text-gray-900 text-2xl font-light -mt-4">175</h5>
+                <p class="text-gray-900 text-center font-light text-sm">Countries served</p>
               </div>
             </div>
           </div>
