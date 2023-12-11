@@ -17,7 +17,7 @@
   font-style: normal;
 }
 :root {
-  --swiper-theme-color: #fff;
+  --swiper-theme-color: #0177ff;
 }
 :host {
   position: relative;
@@ -387,7 +387,7 @@
   );
   display: inline-block;
   border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
-  background: #f9fafb;
+  background: #0177ff;
   opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
 }
 button.swiper-pagination-bullet {
