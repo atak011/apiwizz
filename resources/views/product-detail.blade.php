@@ -1,971 +1,860 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8" />
-    <meta
-        name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title></title>
-    @vite('resources/css/app.css')
-    @vite('resources/css/default.css')
-    @vite('resources/css/prism.min.css')
-    @vite('resources/css/default.css')
-    @vite('resources/css/swiper.css')
-    @vite('resources/css/swiper.min.css')
+@extends('layout')
 
-    <link
-        href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css"
-        rel="stylesheet"
-    />
-</head>
-<body class="flex flex-col min-h-screen">
-    <header class="bg-[#0177ff] lg:py-4 py-2 px-4 lg:px-0">
-        <div class="flex items-center justify-between container mx-auto">
-            <div class="bg-white py-1.5 px-3 rounded-2xl border border-gray-500">
-                <div class="flex items-center gap-2">
-              <span
-                  class="rounded-full bg-[#da522e] py-0.5 px-2.5 text-white font-bold"
-              >P</span
-              >
-                    <div>
-                        <h3 class="text-xs font-extralight text-[#da522e]">
-                            PRODUCT HUNT
-                        </h3>
-                        <p class="text-xs text-[#da522e]">#1 Product of the day</p>
-                    </div>
-                </div>
-            </div>
-            <ul class="lg:flex items-center gap-5 hidden">
-                <li>
-                    <a
-                        href=""
-                        class="text-white font-light hover:underline underline-offset-4 decoration-white transition-all"
-                    >About us</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href=""
-                        class="text-white font-light hover:underline underline-offset-4 decoration-white transition-all"
-                    >Contact us</a
-                    >
-                </li>
-                <li>
-                    <a href=""
-                    ><img class="w-24" src="{{asset ('img/logo.png')}}" alt=""
-                        /></a>
-                </li>
-                <li>
-                    <a
-                        href=""
-                        class="text-white font-light hover:underline underline-offset-4 decoration-white transition-all"
-                    >Tutorials</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href=""
-                        class="text-white font-light hover:underline underline-offset-4 decoration-white transition-all"
-                    >Work with us</a
-                    >
-                </li>
-            </ul>
-            <button
-                class="bg-white py-2 px-6 rounded-2xl border-t-2 border-l-2 border-b-4 border-r-4 border-black hidden lg:block"
-            >
-                Add Your API
-            </button>
-            <button id="menu-toggle"
-                    class="py-1 px-2 border border-white rounded-lg lg:hidden block"
-            >
-                <i class="ri-menu-line text-white"></i>
-            </button>
-        </div>
-        <div id="mobile-menu" class="menu">
-            <div class="bg-[#0177ff] text-white text-lg h-full w-72 p-8">
-                <span id="close-btn" class="close-btn">&times;</span>
-                <a href="index.html"><img class="w-2/3 my-4" src="./view/img/logo.png" alt="" /></a>
-                <ul class="text-white text-base space-y-2">
-                    <li class="pt-1"><a href="#" class="">Create Team</a></li>
-                    <li class="pt-1"><a href="#">Add Your API</a></li>
-                    <li class="pt-1"><a href="#">Docs</a></li>
-                    <li class="pt-1 border-b border-gray-400"></li>
-                    <li class="pt-1"><a href="#" class="">Log In</a></li>
-                    <li class="pt-1"><button class="bg-blue-700 rounded w-full text-white py-1">Sign Up</button></li>
-                    <li class="pt-1 border-b border-gray-400"></li>
-                    <li class="pt-1">
-                        <div
-                            class="flex items-center justify-between py-1 px-2 rounded bg-blue-600"
-                        >
-                            <input
-                                type="search"
-                                placeholder="Search for API's"
-                                class="bg-inherit focus:outline-none text-white text-xs"
-                            />
-                            <i class="ri-search-line text-white"></i>
-                        </div>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </header>
+@section('content')
     <section class="pt-6 bg-[#0177ff]">
-      <div
-        class="flex flex-col lg:flex-row items-center justify-between border-b border-white pb-4 px-14"
-      >
-        <div class="flex flex-col lg:flex-row items-center gap-3">
-          <img
-            class="lg:w-16 w-10 lg:h-16 h-10"
-            src="{{asset ('/img/pp2.png')}}"
-            alt=""
-          />
-          <h1 class="lg:text-2xl text-lg text-white lg:hidden block">
-            Recipe - Food - Nutrition
-          </h1>
-          <div class="space-y-2">
-            <div
-              class="flex justify-center lg:justify-start items-center gap-5"
-            >
-              <h1 class="lg:text-2xl text-lg text-white hidden lg:block">
-                Recipe - Food - Nutrition
-              </h1>
-              <button>
-                <i class="ri-heart-line ri-xl text-white"></i>
-              </button>
-              <button
-                class="text-xs text-white px-0.5 py-0.5 bg-gray-500 rounded"
-              >
-                FREEMIUM
-              </button>
-              <div
-                class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% rounded-xl w-[72px] px-1"
-              >
-                <span class="text-xs text-white">Verified</span>
-                <i class="ri-check-line ri-sm text-white"></i>
-              </div>
-            </div>
-            <p class="text-sm text-white text-center lg:text-left">
-              By
-              <a
-                href=""
-                class="text-gray-200 hover:text-blue-700 hover:underline underline-offset-4 decoration-blue-700 transition-all"
-                >Davıd</a
-              >
-              | Updated a year ago |
-              <a
-                href=""
-                class="text-gray-200 hover:text-blue-700 hover:underline underline-offset-4 decoration-blue-700 transition-all"
-                >Food</a
-              >
-              | Featured in
-              <a
-                href=""
-                class="text-gray-200 hover:text-blue-700 hover:underline underline-offset-4 decoration-blue-700 transition-all"
-                >Food & Restaurant</a
-              >
-            </p>
-          </div>
-        </div>
         <div
-          class="lg:flex grid grid-cols-2 lg:gap-0 gap-2 items-center py-3 lg:py-0"
+            class="flex flex-col lg:flex-row items-center justify-between border-b border-white pb-4 px-14"
         >
-          <div class="border-r border-white px-3 space-y-1">
-            <div class="text-white text-sm lg:text-base whitespace-nowrap">
-              <i class="ri-line-chart-line ri-lg"></i>
-              <span>Popularity</span>
-            </div>
-            <p class="text-white text-2xl text-center">9.9 / 10</p>
-          </div>
-          <div class="border-r border-white px-3 space-y-1">
-            <div class="text-white text-sm lg:text-base whitespace-nowrap">
-              <i class="ri-time-line ri-lg"></i>
-              <span>Latency</span>
-            </div>
-            <p class="text-white text-2xl text-center">454ms</p>
-          </div>
-          <div class="border-r border-white px-3 space-y-1">
-            <div class="text-white text-sm lg:text-base whitespace-nowrap">
-              <i class="ri-check-line ri-lg"></i>
-              <span>Service Level</span>
-            </div>
-            <p class="text-white text-2xl text-center">100%</p>
-          </div>
-          <div class="border-r border-white lg:border-0 px-3 space-y-1">
-            <div class="text-white text-sm lg:text-base whitespace-nowrap">
-              <i class="ri-add-line ri-lg"></i>
-              <span>Health Check</span>
-            </div>
-            <p class="text-white text-2xl text-center">N/A</p>
-          </div>
-        </div>
-      </div>
-      <div class="pt-2">
-        <div
-          class="flex items-center justify-center gap-5 tab-menu border-b border-white px-14 overflow-x-scroll"
-        >
-          <a
-            href="#tab1"
-            class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2 border-b-2 border-blue-500"
-          >
-            Endpoints
-          </a>
-          <a
-            href="#tab2"
-            class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2"
-          >
-            About
-          </a>
-          <a
-            href="#tab3"
-            class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2"
-          >
-            Tutorials
-          </a>
-          <a
-            href="#tab4"
-            class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2"
-          >
-            Discussions
-          </a>
-          <a
-            href="#tab5"
-            class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2"
-          >
-            Pricing
-          </a>
-        </div>
-        <div class="tab-content">
-          <div class="w-full pt-2" id="tab1">
-            <p class="text-white px-14">
-              The spoonacular Recipe - Food - Nutrition API gives you to access
-              to thousands of recipes, storeboug
-            </p>
-            <div class="bg-white pt-4 mt-2 border-b border-black">
-              <div class="px-4 border-b border-black pb-2">
-                <select
-                  name=""
-                  id=""
-                  disabled
-                  class="bg-gray-200 px-2 pr-20 py-1 rounded-lg border border-gray-500 text-gray-900"
-                >
-                  <option value="">V1 (Current)</option>
-                </select>
-              </div>
-              <div class="lg:flex">
-                <div
-                  class="lg:w-1/3 border-r border-blue-600 h-[450px] overflow-y-scroll"
-                >
-                  <div class="py-3 border-b border-black">
+            <div class="flex flex-col lg:flex-row items-center gap-3">
+                <img
+                    class="lg:w-16 w-10 lg:h-16 h-10"
+                    src="{{asset ('/img/pp2.png')}}"
+                    alt=""
+                />
+                <h1 class="lg:text-2xl text-lg text-white lg:hidden block">
+                    Recipe - Food - Nutrition
+                </h1>
+                <div class="space-y-2">
                     <div
-                      class="lg:flex items-center justify-between py-1 px-2 rounded bg-gray-200 hidden mx-4"
+                        class="flex justify-center lg:justify-start items-center gap-5"
                     >
-                      <input
-                        type="search"
-                        placeholder="Search Endpoints"
-                        class="bg-inherit focus:outline-none text-gray-900 text-xs w-full"
-                      />
-                      <i class="ri-search-line text-gray-900"></i>
+                        <h1 class="lg:text-2xl text-lg text-white hidden lg:block">
+                            Recipe - Food - Nutrition
+                        </h1>
+                        <button>
+                            <i class="ri-heart-line ri-xl text-white"></i>
+                        </button>
+                        <button
+                            class="text-xs text-white px-0.5 py-0.5 bg-gray-500 rounded"
+                        >
+                            FREEMIUM
+                        </button>
+                        <div
+                            class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% rounded-xl w-[72px] px-1"
+                        >
+                            <span class="text-xs text-white">Verified</span>
+                            <i class="ri-check-line ri-sm text-white"></i>
+                        </div>
                     </div>
-                  </div>
-                  <div x-data="{selected:1}" class="text-gray-900">
-                    <ul class="">
-                      <li class="relative border-b border-black">
-                        <button
-                          type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
-                          @click="selected !== 1 ? selected = 1 : selected = null"
+                    <p class="text-sm text-white text-center lg:text-left">
+                        By
+                        <a
+                            href=""
+                            class="text-gray-200 hover:text-blue-700 hover:underline underline-offset-4 decoration-blue-700 transition-all"
+                        >Davıd</a
                         >
-                          <div class="flex items-center justify-between">
-                            <span> Recipes </span>
-                            <i class="ri-arrow-down-s-line ri-lg"></i>
-                          </div>
-                        </button>
-
-                        <div
-                          class="relative overflow-hidden transition-all max-h-0 duration-700"
-                          style=""
-                          x-ref="container1"
-                          x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                        | Updated a year ago |
+                        <a
+                            href=""
+                            class="text-gray-200 hover:text-blue-700 hover:underline underline-offset-4 decoration-blue-700 transition-all"
+                        >Food</a
                         >
-                          <div
-                            class="px-4 pb-2 flex items-start justify-start flex-col text-sm"
-                          >
-                            <button
-                              class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-green-600">GET</span>
-                              Search Recipes
-                            </button>
-                            <button
-                              class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-green-600">GET</span>
-                              Search Recipes
-                            </button>
-                            <button
-                              class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-green-600">GET</span>
-                              Search Recipes
-                            </button>
-                            <button
-                              class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-blue-600">POST</span>
-                              Search Recipes
-                            </button>
-                          </div>
-                        </div>
-                      </li>
-
-                      <li class="relative border-b border-black">
-                        <button
-                          type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
-                          @click="selected !== 2 ? selected = 2 : selected = null"
+                        | Featured in
+                        <a
+                            href=""
+                            class="text-gray-200 hover:text-blue-700 hover:underline underline-offset-4 decoration-blue-700 transition-all"
+                        >Food & Restaurant</a
                         >
-                          <div class="flex items-center justify-between">
-                            <span> Ingredients </span>
-                            <i class="ri-arrow-down-s-line ri-lg"></i>
-                          </div>
-                        </button>
-
-                        <div
-                          class="relative overflow-hidden transition-all max-h-0 duration-700"
-                          style=""
-                          x-ref="container2"
-                          x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
-                        >
-                          <div
-                            class="px-4 pb-2 flex items-start justify-start flex-col text-sm"
-                          >
-                            <button
-                              class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-green-600">GET</span>
-                              Search Recipes
-                            </button>
-                            <button
-                              class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-green-600">GET</span>
-                              Search Recipes
-                            </button>
-                            <button
-                              class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-green-600">GET</span>
-                              Search Recipes
-                            </button>
-                            <button
-                              class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                            >
-                              <span class="text-xs text-blue-600">POST</span>
-                              Search Recipes
-                            </button>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="relative border-b border-black">
-                        <button
-                          type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
-                          @click="selected !== 3 ? selected = 3 : selected = null"
-                        >
-                          <div class="flex items-center justify-between">
-                            <span> Products </span>
-                            <i class="ri-arrow-down-s-line ri-lg"></i>
-                          </div>
-                        </button>
-
-                        <div
-                          class="relative overflow-hidden transition-all max-h-0 duration-700"
-                          style=""
-                          x-ref="container3"
-                          x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
-                        >
-                        <div
-                        class="px-4 pb-2 flex items-start justify-start flex-col text-sm"
-                      >
-                        <button
-                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                        >
-                          <span class="text-xs text-green-600">GET</span>
-                          Search Recipes
-                        </button>
-                        <button
-                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                        >
-                          <span class="text-xs text-green-600">GET</span>
-                          Search Recipes
-                        </button>
-                        <button
-                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                        >
-                          <span class="text-xs text-green-600">GET</span>
-                          Search Recipes
-                        </button>
-                        <button
-                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                        >
-                          <span class="text-xs text-blue-600">POST</span>
-                          Search Recipes
-                        </button>
-                      </div>
-                        </div>
-                      </li>
-                      <li class="relative border-b border-black">
-                        <button
-                          type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
-                          @click="selected !== 4 ? selected = 4 : selected = null"
-                        >
-                          <div class="flex items-center justify-between">
-                            <span> Products </span>
-                            <i class="ri-arrow-down-s-line ri-lg"></i>
-                          </div>
-                        </button>
-
-                        <div
-                          class="relative overflow-hidden transition-all max-h-0 duration-700"
-                          style=""
-                          x-ref="container4"
-                          x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''"
-                        >
-                        <div
-                        class="px-4 pb-2 flex items-start justify-start flex-col text-sm"
-                      >
-                        <button
-                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                        >
-                          <span class="text-xs text-green-600">GET</span>
-                          Search Recipes
-                        </button>
-                        <button
-                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                        >
-                          <span class="text-xs text-green-600">GET</span>
-                          Search Recipes
-                        </button>
-                        <button
-                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                        >
-                          <span class="text-xs text-green-600">GET</span>
-                          Search Recipes
-                        </button>
-                        <button
-                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                        >
-                          <span class="text-xs text-blue-600">POST</span>
-                          Search Recipes
-                        </button>
-                      </div>
-                        </div>
-                      </li>
-                      <li class="relative border-b border-black">
-                        <button
-                          type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
-                          @click="selected !== 5 ? selected = 5 : selected = null"
-                        >
-                          <div class="flex items-center justify-between">
-                            <span> Products </span>
-                            <i class="ri-arrow-down-s-line ri-lg"></i>
-                          </div>
-                        </button>
-
-                        <div
-                          class="relative overflow-hidden transition-all max-h-0 duration-700"
-                          style=""
-                          x-ref="container5"
-                          x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''"
-                        >
-                        <div
-                        class="px-4 pb-2 flex items-start justify-start flex-col text-sm"
-                      >
-                        <button
-                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                        >
-                          <span class="text-xs text-green-600">GET</span>
-                          Search Recipes
-                        </button>
-                        <button
-                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                        >
-                          <span class="text-xs text-green-600">GET</span>
-                          Search Recipes
-                        </button>
-                        <button
-                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                        >
-                          <span class="text-xs text-green-600">GET</span>
-                          Search Recipes
-                        </button>
-                        <button
-                          class="w-full text-left py-2 px-1 rounded-lg transition-all"
-                        >
-                          <span class="text-xs text-blue-600">POST</span>
-                          Search Recipes
-                        </button>
-                      </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
+                    </p>
                 </div>
-                <div
-                  class="lg:w-1/3 border-r border-blue-600 h-[450px] overflow-y-scroll"
-                >
-                  <div
-                    class="py-3 border-b border-t lg:border-t-0 border-black px-5"
-                  >
-                    <div class="flex items-center justify-between">
-                      <div>
-                        <span class="text-green-600">GET</span>
-                        <span class="text-gray-900 text-sm">Search Recipes</span>
-                      </div>
-                      <button
-                        class="text-white py-[5.5px] px-3 text-sm bg-blue-600 rounded-lg"
-                      >
-                        <i class="ri-arrow-left-right-line ri-base"></i>
-                        Test Endpoint
-                      </button>
+            </div>
+            <div
+                class="lg:flex grid grid-cols-2 lg:gap-0 gap-2 items-center py-3 lg:py-0"
+            >
+                <div class="border-r border-white px-3 space-y-1">
+                    <div class="text-white text-sm lg:text-base whitespace-nowrap">
+                        <i class="ri-line-chart-line ri-lg"></i>
+                        <span>Popularity</span>
                     </div>
-                  </div>
-                  <div class="py-2 border-b border-black">
-                    <div class="px-5">
-                      <p class="text-gray-900">
-                        Search through thousands of recipes using advanced
-                        filtering and ranking. NOTE: Since this method combines
-                        searching by query, by ingredients, and by nutrients
-                        into one endpoint, each request counts as 3 requests.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="py-2 border-b border-black">
-                    <div class="px-5 pb-5 flex items-start gap-16 w-full">
-                      <h3
-                        class="text-gray-900 font-light text-sm whitespace-nowrap"
-                      >
-                        Request URL
-                      </h3>
-                      <div class="w-full">
-                        <select
-                          name=""
-                          id=""
-                          class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900"
-                        >
-                          <option value="">rapidapi.com</option>
-                        </select>
-                        <h4 class="text-blue-600 font-light text-sm">
-                          REQUIRED
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div x-data="{selected:0}" class="text-gray-900">
-                    <ul class="">
-                      <li class="relative border-b border-black">
-                        <button
-                          type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
-                          @click="selected !== 1 ? selected = 1 : selected = null"
-                        >
-                          <div class="flex items-center justify-between">
-                            <span> Header Parameters </span>
-                            <i class="ri-arrow-down-s-line ri-lg"></i>
-                          </div>
-                        </button>
-
-                        <div
-                          class="relative overflow-hidden transition-all max-h-0 duration-700"
-                          style=""
-                          x-ref="container1"
-                          x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
-                        >
-                          <div class="py-2">
-                            <div class="px-5 flex items-start gap-16 w-full">
-                              <div>
-                                <h3
-                                  class="text-gray-900 font-light text-sm whitespace-nowrap"
-                                >
-                                  Request URL
-                                </h3>
-                                <h5
-                                  class="text-gray-600 pt-1 font-light text-sm"
-                                >
-                                  STRING
-                                </h5>
-                              </div>
-                              <div class="w-full">
-                                <select
-                                  name=""
-                                  id=""
-                                  class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900"
-                                >
-                                  <option value="">rapidapi.com</option>
-                                </select>
-                                <h4 class="text-blue-600 font-light text-sm">
-                                  REQUIRED
-                                </h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            class="py-2 border-b border-black"
-                          >
-                            <div
-                              class="px-5 pb-5 flex items-start gap-16 w-full"
-                            >
-                              <div>
-                                <h3
-                                  class="text-gray-900 font-light text-sm whitespace-nowrap"
-                                >
-                                  Request URL
-                                </h3>
-                                <h5
-                                  class="text-gray-600 pt-1 font-light text-sm"
-                                >
-                                  STRING
-                                </h5>
-                              </div>
-                              <div class="w-full">
-                                <input
-                                  type="text"
-                                  disabled
-                                  placeholder=""
-                                  value="spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
-                                  class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900 text-sm"
-                                />
-                                <h4 class="text-blue-600 font-light text-sm">
-                                  REQUIRED
-                                </h4>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-
-                      <li class="relative border-b border-black">
-                        <button
-                          type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
-                          @click="selected !== 2 ? selected = 2 : selected = null"
-                        >
-                          <div class="flex items-center justify-between">
-                            <span> Ingredients </span>
-                            <i class="ri-arrow-down-s-line ri-lg"></i>
-                          </div>
-                        </button>
-
-                        <div
-                          class="relative overflow-hidden transition-all max-h-0 duration-700"
-                          style=""
-                          x-ref="container2"
-                          x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
-                        >
-                          <div class="py-2">
-                            <div class="px-5 flex items-start gap-16 w-full">
-                              <div>
-                                <h3
-                                  class="text-gray-900 font-light text-sm whitespace-nowrap"
-                                >
-                                  Request URL
-                                </h3>
-                                <h5
-                                  class="text-gray-600 pt-1 font-light text-sm"
-                                >
-                                  STRING
-                                </h5>
-                              </div>
-                              <div class="w-full">
-                                <select
-                                  name=""
-                                  id=""
-                                  class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900"
-                                >
-                                  <option value="">rapidapi.com</option>
-                                </select>
-                                <div class="flex items-start gap-2">
-                                  <h4 class="text-blue-600 font-light text-sm">
-                                    REQUIRED
-                                  </h4>
-                                  <p class="text-xs text-gray-900">
-                                    The cuisine(s) of the recipes. One or more
-                                    (comma separated) of the following: african,
-                                    chinese, japanese, korean, vietnamese, thai,
-                                    indian, british, irish, french, italian,
-                                    mexican, spanish, middle eastern, jewish,
-                                    american, cajun, southern, greek, german,
-                                    nordic, eastern european, caribbean, or
-                                    latin american.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            class="py-2 border-b border-black"
-                          >
-                            <div
-                              class="px-5 pb-5 flex items-start gap-16 w-full"
-                            >
-                              <div>
-                                <h3
-                                  class="text-gray-900 font-light text-sm whitespace-nowrap"
-                                >
-                                  Request URL
-                                </h3>
-                                <h5
-                                  class="text-gray-700 pt-1 font-light text-sm"
-                                >
-                                  STRING
-                                </h5>
-                              </div>
-                              <div class="w-full">
-                                <input
-                                  type="text"
-                                  disabled
-                                  placeholder=""
-                                  value="spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
-                                  class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900 text-sm"
-                                />
-                                <h4 class="text-blue-600 font-light text-sm">
-                                  REQUIRED
-                                </h4>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="relative border-b border-black">
-                        <button
-                          type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
-                          @click="selected !== 3 ? selected = 3 : selected = null"
-                        >
-                          <div class="flex items-center justify-between">
-                            <span> Products </span>
-                            <i class="ri-arrow-down-s-line ri-lg"></i>
-                          </div>
-                        </button>
-
-                        <div
-                          class="relative overflow-hidden transition-all max-h-0 duration-700"
-                          style=""
-                          x-ref="container3"
-                          x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
-                        >
-                        <div class="py-2">
-                            <div class="px-5 flex items-start gap-16 w-full">
-                              <div>
-                                <h3
-                                  class="text-gray-900 font-light text-sm whitespace-nowrap"
-                                >
-                                  Request URL
-                                </h3>
-                                <h5
-                                  class="text-gray-600 pt-1 font-light text-sm"
-                                >
-                                  STRING
-                                </h5>
-                              </div>
-                              <div class="w-full">
-                                <select
-                                  name=""
-                                  id=""
-                                  class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900"
-                                >
-                                  <option value="">rapidapi.com</option>
-                                </select>
-                                <div class="flex items-start gap-2">
-                                  <h4 class="text-blue-600 font-light text-sm">
-                                    REQUIRED
-                                  </h4>
-                                  <p class="text-xs text-gray-900">
-                                    The cuisine(s) of the recipes. One or more
-                                    (comma separated) of the following: african,
-                                    chinese, japanese, korean, vietnamese, thai,
-                                    indian, british, irish, french, italian,
-                                    mexican, spanish, middle eastern, jewish,
-                                    american, cajun, southern, greek, german,
-                                    nordic, eastern european, caribbean, or
-                                    latin american.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            class="py-2 border-b border-black"
-                          >
-                            <div
-                              class="px-5 pb-5 flex items-start gap-16 w-full"
-                            >
-                              <div>
-                                <h3
-                                  class="text-gray-900 font-light text-sm whitespace-nowrap"
-                                >
-                                  Request URL
-                                </h3>
-                                <h5
-                                  class="text-gray-700 pt-1 font-light text-sm"
-                                >
-                                  STRING
-                                </h5>
-                              </div>
-                              <div class="w-full">
-                                <input
-                                  type="text"
-                                  disabled
-                                  placeholder=""
-                                  value="spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
-                                  class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900 text-sm"
-                                />
-                                <h4 class="text-blue-600 font-light text-sm">
-                                  REQUIRED
-                                </h4>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="relative border-b border-black">
-                        <button
-                          type="button"
-                          class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
-                          @click="selected !== 5 ? selected = 5 : selected = null"
-                        >
-                          <div class="flex items-center justify-between">
-                            <span> Products </span>
-                            <i class="ri-arrow-down-s-line ri-lg"></i>
-                          </div>
-                        </button>
-
-                        <div
-                          class="relative overflow-hidden transition-all max-h-0 duration-700"
-                          style=""
-                          x-ref="container5"
-                          x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''"
-                        >
-                        <div class="py-2">
-                            <div class="px-5 flex items-start gap-16 w-full">
-                              <div>
-                                <h3
-                                  class="text-gray-900 font-light text-sm whitespace-nowrap"
-                                >
-                                  Request URL
-                                </h3>
-                                <h5
-                                  class="text-gray-600 pt-1 font-light text-sm"
-                                >
-                                  STRING
-                                </h5>
-                              </div>
-                              <div class="w-full">
-                                <select
-                                  name=""
-                                  id=""
-                                  class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900"
-                                >
-                                  <option value="">rapidapi.com</option>
-                                </select>
-                                <div class="flex items-start gap-2">
-                                  <h4 class="text-blue-600 font-light text-sm">
-                                    REQUIRED
-                                  </h4>
-                                  <p class="text-xs text-gray-900">
-                                    The cuisine(s) of the recipes. One or more
-                                    (comma separated) of the following: african,
-                                    chinese, japanese, korean, vietnamese, thai,
-                                    indian, british, irish, french, italian,
-                                    mexican, spanish, middle eastern, jewish,
-                                    american, cajun, southern, greek, german,
-                                    nordic, eastern european, caribbean, or
-                                    latin american.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            class="py-2 border-b border-black"
-                          >
-                            <div
-                              class="px-5 pb-5 flex items-start gap-16 w-full"
-                            >
-                              <div>
-                                <h3
-                                  class="text-gray-900 font-light text-sm whitespace-nowrap"
-                                >
-                                  Request URL
-                                </h3>
-                                <h5
-                                  class="text-gray-700 pt-1 font-light text-sm"
-                                >
-                                  STRING
-                                </h5>
-                              </div>
-                              <div class="w-full">
-                                <input
-                                  type="text"
-                                  disabled
-                                  placeholder=""
-                                  value="spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
-                                  class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900 text-sm"
-                                />
-                                <h4 class="text-blue-600 font-light text-sm">
-                                  REQUIRED
-                                </h4>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
+                    <p class="text-white text-2xl text-center">9.9 / 10</p>
                 </div>
-                <div
-                  class="lg:w-1/3 border-r border-blue-600 h-[450px] overflow-y-scroll"
-                >
-                  <div
-                    class="pt-[18px] border-b border-t lg:border-t-0 border-black px-5"
-                  >
-                    <div class="flex items-center gap-5">
-                      <a
-                        href=""
-                        class="text-sm text-gray-900 hover:text-blue-700 transition-all pb-4 border-b-2 border-blue-500"
-                      >
-                        Code Snippets
-                      </a>
-                      <a
-                        href=""
-                        class="text-sm text-gray-600 hover:text-blue-700 transition-all pb-4"
-                      >
-                        Results
-                      </a>
+                <div class="border-r border-white px-3 space-y-1">
+                    <div class="text-white text-sm lg:text-base whitespace-nowrap">
+                        <i class="ri-time-line ri-lg"></i>
+                        <span>Latency</span>
                     </div>
-                  </div>
-                  <div class="flex items-center gap-4 px-5 pt-4">
-                    <select
-                      name=""
-                      id=""
-                      class="border rounded-lg border-black py-1 px-2 bg-gray-200 text-gray-900 w-52 text-xs"
-                    >
-                      <option value="">(Node.js) Axios</option>
-                    </select>
-                    <button
-                      id="btn"
-                      class="flex items-center gap-1 text-sky-400 text-sm"
-                    >
-                      <i class="ri-file-copy-line"></i>
-                      Copy
-                    </button>
-                  </div>
-                  <pre>
+                    <p class="text-white text-2xl text-center">454ms</p>
+                </div>
+                <div class="border-r border-white px-3 space-y-1">
+                    <div class="text-white text-sm lg:text-base whitespace-nowrap">
+                        <i class="ri-check-line ri-lg"></i>
+                        <span>Service Level</span>
+                    </div>
+                    <p class="text-white text-2xl text-center">100%</p>
+                </div>
+                <div class="border-r border-white lg:border-0 px-3 space-y-1">
+                    <div class="text-white text-sm lg:text-base whitespace-nowrap">
+                        <i class="ri-add-line ri-lg"></i>
+                        <span>Health Check</span>
+                    </div>
+                    <p class="text-white text-2xl text-center">N/A</p>
+                </div>
+            </div>
+        </div>
+        <div class="pt-2">
+            <div
+                class="flex items-center justify-center gap-5 tab-menu border-b border-white px-14 "
+            >
+                <a
+                    href="#tab1"
+                    class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2 border-b-2 border-blue-500"
+                >
+                    Endpoints
+                </a>
+                <a
+                    href="#tab2"
+                    class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2"
+                >
+                    About
+                </a>
+                <a
+                    href="#tab3"
+                    class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2"
+                >
+                    Tutorials
+                </a>
+                <a
+                    href="#tab4"
+                    class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2"
+                >
+                    Discussions
+                </a>
+                <a
+                    href="#tab5"
+                    class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2"
+                >
+                    Pricing
+                </a>
+            </div>
+            <div class="tab-content">
+                <div class="w-full pt-2" id="tab1">
+                    <p class="text-white px-14">
+                        The spoonacular Recipe - Food - Nutrition API gives you to access
+                        to thousands of recipes, storeboug
+                    </p>
+                    <div class="bg-white pt-4 mt-2 border-b border-black">
+                        <div class="px-4 border-b border-black pb-2">
+                            <select
+                                name=""
+                                id=""
+                                disabled
+                                class="bg-gray-200 px-2 pr-20 py-1 rounded-lg border border-gray-500 text-gray-900"
+                            >
+                                <option value="">V1 (Current)</option>
+                            </select>
+                        </div>
+                        <div class="lg:flex">
+                            <div
+                                class="lg:w-1/3 border-r border-blue-600 h-[450px] overflow-y-scroll"
+                            >
+                                <div class="py-3 border-b border-black">
+                                    <div
+                                        class="lg:flex items-center justify-between py-1 px-2 rounded bg-gray-200 hidden mx-4"
+                                    >
+                                        <input
+                                            type="search"
+                                            placeholder="Search Endpoints"
+                                            class="bg-inherit focus:outline-none text-gray-900 text-xs w-full"
+                                        />
+                                        <i class="ri-search-line text-gray-900"></i>
+                                    </div>
+                                </div>
+                                <div x-data="{selected:1}" class="text-gray-900">
+                                    <ul class="">
+                                        <li class="relative border-b border-black">
+                                            <button
+                                                type="button"
+                                                class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
+                                                @click="selected !== 1 ? selected = 1 : selected = null"
+                                            >
+                                                <div class="flex items-center justify-between">
+                                                    <span> Recipes </span>
+                                                    <i class="ri-arrow-down-s-line ri-lg"></i>
+                                                </div>
+                                            </button>
+
+                                            <div
+                                                class="relative overflow-hidden transition-all max-h-0 duration-700"
+                                                style=""
+                                                x-ref="container1"
+                                                x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                                            >
+                                                <div
+                                                    class="px-4 pb-2 flex items-start justify-start flex-col text-sm"
+                                                >
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-green-600">GET</span>
+                                                        Search Recipes
+                                                    </button>
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-green-600">GET</span>
+                                                        Search Recipes
+                                                    </button>
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-green-600">GET</span>
+                                                        Search Recipes
+                                                    </button>
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-blue-600">POST</span>
+                                                        Search Recipes
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="relative border-b border-black">
+                                            <button
+                                                type="button"
+                                                class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
+                                                @click="selected !== 2 ? selected = 2 : selected = null"
+                                            >
+                                                <div class="flex items-center justify-between">
+                                                    <span> Ingredients </span>
+                                                    <i class="ri-arrow-down-s-line ri-lg"></i>
+                                                </div>
+                                            </button>
+
+                                            <div
+                                                class="relative overflow-hidden transition-all max-h-0 duration-700"
+                                                style=""
+                                                x-ref="container2"
+                                                x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
+                                            >
+                                                <div
+                                                    class="px-4 pb-2 flex items-start justify-start flex-col text-sm"
+                                                >
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-green-600">GET</span>
+                                                        Search Recipes
+                                                    </button>
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-green-600">GET</span>
+                                                        Search Recipes
+                                                    </button>
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-green-600">GET</span>
+                                                        Search Recipes
+                                                    </button>
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-blue-600">POST</span>
+                                                        Search Recipes
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="relative border-b border-black">
+                                            <button
+                                                type="button"
+                                                class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
+                                                @click="selected !== 3 ? selected = 3 : selected = null"
+                                            >
+                                                <div class="flex items-center justify-between">
+                                                    <span> Products </span>
+                                                    <i class="ri-arrow-down-s-line ri-lg"></i>
+                                                </div>
+                                            </button>
+
+                                            <div
+                                                class="relative overflow-hidden transition-all max-h-0 duration-700"
+                                                style=""
+                                                x-ref="container3"
+                                                x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
+                                            >
+                                                <div
+                                                    class="px-4 pb-2 flex items-start justify-start flex-col text-sm"
+                                                >
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-green-600">GET</span>
+                                                        Search Recipes
+                                                    </button>
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-green-600">GET</span>
+                                                        Search Recipes
+                                                    </button>
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-green-600">GET</span>
+                                                        Search Recipes
+                                                    </button>
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-blue-600">POST</span>
+                                                        Search Recipes
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="relative border-b border-black">
+                                            <button
+                                                type="button"
+                                                class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
+                                                @click="selected !== 4 ? selected = 4 : selected = null"
+                                            >
+                                                <div class="flex items-center justify-between">
+                                                    <span> Products </span>
+                                                    <i class="ri-arrow-down-s-line ri-lg"></i>
+                                                </div>
+                                            </button>
+
+                                            <div
+                                                class="relative overflow-hidden transition-all max-h-0 duration-700"
+                                                style=""
+                                                x-ref="container4"
+                                                x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''"
+                                            >
+                                                <div
+                                                    class="px-4 pb-2 flex items-start justify-start flex-col text-sm"
+                                                >
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-green-600">GET</span>
+                                                        Search Recipes
+                                                    </button>
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-green-600">GET</span>
+                                                        Search Recipes
+                                                    </button>
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-green-600">GET</span>
+                                                        Search Recipes
+                                                    </button>
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-blue-600">POST</span>
+                                                        Search Recipes
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="relative border-b border-black">
+                                            <button
+                                                type="button"
+                                                class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
+                                                @click="selected !== 5 ? selected = 5 : selected = null"
+                                            >
+                                                <div class="flex items-center justify-between">
+                                                    <span> Products </span>
+                                                    <i class="ri-arrow-down-s-line ri-lg"></i>
+                                                </div>
+                                            </button>
+
+                                            <div
+                                                class="relative overflow-hidden transition-all max-h-0 duration-700"
+                                                style=""
+                                                x-ref="container5"
+                                                x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''"
+                                            >
+                                                <div
+                                                    class="px-4 pb-2 flex items-start justify-start flex-col text-sm"
+                                                >
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-green-600">GET</span>
+                                                        Search Recipes
+                                                    </button>
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-green-600">GET</span>
+                                                        Search Recipes
+                                                    </button>
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-green-600">GET</span>
+                                                        Search Recipes
+                                                    </button>
+                                                    <button
+                                                        class="w-full text-left py-2 px-1 rounded-lg transition-all"
+                                                    >
+                                                        <span class="text-xs text-blue-600">POST</span>
+                                                        Search Recipes
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div
+                                class="lg:w-1/3 border-r border-blue-600 h-[450px] overflow-y-scroll"
+                            >
+                                <div
+                                    class="py-3 border-b border-t lg:border-t-0 border-black px-5"
+                                >
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-green-600">GET</span>
+                                            <span class="text-gray-900 text-sm">Search Recipes</span>
+                                        </div>
+                                        <button
+                                            class="text-white py-[5.5px] px-3 text-sm bg-blue-600 rounded-lg"
+                                        >
+                                            <i class="ri-arrow-left-right-line ri-base"></i>
+                                            Test Endpoint
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="py-2 border-b border-black">
+                                    <div class="px-5">
+                                        <p class="text-gray-900">
+                                            Search through thousands of recipes using advanced
+                                            filtering and ranking. NOTE: Since this method combines
+                                            searching by query, by ingredients, and by nutrients
+                                            into one endpoint, each request counts as 3 requests.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="py-2 border-b border-black">
+                                    <div class="px-5 pb-5 flex items-start gap-16 w-full">
+                                        <h3
+                                            class="text-gray-900 font-light text-sm whitespace-nowrap"
+                                        >
+                                            Request URL
+                                        </h3>
+                                        <div class="w-full">
+                                            <select
+                                                name=""
+                                                id=""
+                                                class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900"
+                                            >
+                                                <option value="">rapidapi.com</option>
+                                            </select>
+                                            <h4 class="text-blue-600 font-light text-sm">
+                                                REQUIRED
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div x-data="{selected:0}" class="text-gray-900">
+                                    <ul class="">
+                                        <li class="relative border-b border-black">
+                                            <button
+                                                type="button"
+                                                class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
+                                                @click="selected !== 1 ? selected = 1 : selected = null"
+                                            >
+                                                <div class="flex items-center justify-between">
+                                                    <span> Header Parameters </span>
+                                                    <i class="ri-arrow-down-s-line ri-lg"></i>
+                                                </div>
+                                            </button>
+
+                                            <div
+                                                class="relative overflow-hidden transition-all max-h-0 duration-700"
+                                                style=""
+                                                x-ref="container1"
+                                                x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                                            >
+                                                <div class="py-2">
+                                                    <div class="px-5 flex items-start gap-16 w-full">
+                                                        <div>
+                                                            <h3
+                                                                class="text-gray-900 font-light text-sm whitespace-nowrap"
+                                                            >
+                                                                Request URL
+                                                            </h3>
+                                                            <h5
+                                                                class="text-gray-600 pt-1 font-light text-sm"
+                                                            >
+                                                                STRING
+                                                            </h5>
+                                                        </div>
+                                                        <div class="w-full">
+                                                            <select
+                                                                name=""
+                                                                id=""
+                                                                class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900"
+                                                            >
+                                                                <option value="">rapidapi.com</option>
+                                                            </select>
+                                                            <h4 class="text-blue-600 font-light text-sm">
+                                                                REQUIRED
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="py-2 border-b border-black"
+                                                >
+                                                    <div
+                                                        class="px-5 pb-5 flex items-start gap-16 w-full"
+                                                    >
+                                                        <div>
+                                                            <h3
+                                                                class="text-gray-900 font-light text-sm whitespace-nowrap"
+                                                            >
+                                                                Request URL
+                                                            </h3>
+                                                            <h5
+                                                                class="text-gray-600 pt-1 font-light text-sm"
+                                                            >
+                                                                STRING
+                                                            </h5>
+                                                        </div>
+                                                        <div class="w-full">
+                                                            <input
+                                                                type="text"
+                                                                disabled
+                                                                placeholder=""
+                                                                value="spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
+                                                                class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900 text-sm"
+                                                            />
+                                                            <h4 class="text-blue-600 font-light text-sm">
+                                                                REQUIRED
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="relative border-b border-black">
+                                            <button
+                                                type="button"
+                                                class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
+                                                @click="selected !== 2 ? selected = 2 : selected = null"
+                                            >
+                                                <div class="flex items-center justify-between">
+                                                    <span> Ingredients </span>
+                                                    <i class="ri-arrow-down-s-line ri-lg"></i>
+                                                </div>
+                                            </button>
+
+                                            <div
+                                                class="relative overflow-hidden transition-all max-h-0 duration-700"
+                                                style=""
+                                                x-ref="container2"
+                                                x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
+                                            >
+                                                <div class="py-2">
+                                                    <div class="px-5 flex items-start gap-16 w-full">
+                                                        <div>
+                                                            <h3
+                                                                class="text-gray-900 font-light text-sm whitespace-nowrap"
+                                                            >
+                                                                Request URL
+                                                            </h3>
+                                                            <h5
+                                                                class="text-gray-600 pt-1 font-light text-sm"
+                                                            >
+                                                                STRING
+                                                            </h5>
+                                                        </div>
+                                                        <div class="w-full">
+                                                            <select
+                                                                name=""
+                                                                id=""
+                                                                class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900"
+                                                            >
+                                                                <option value="">rapidapi.com</option>
+                                                            </select>
+                                                            <div class="flex items-start gap-2">
+                                                                <h4 class="text-blue-600 font-light text-sm">
+                                                                    REQUIRED
+                                                                </h4>
+                                                                <p class="text-xs text-gray-900">
+                                                                    The cuisine(s) of the recipes. One or more
+                                                                    (comma separated) of the following: african,
+                                                                    chinese, japanese, korean, vietnamese, thai,
+                                                                    indian, british, irish, french, italian,
+                                                                    mexican, spanish, middle eastern, jewish,
+                                                                    american, cajun, southern, greek, german,
+                                                                    nordic, eastern european, caribbean, or
+                                                                    latin american.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="py-2 border-b border-black"
+                                                >
+                                                    <div
+                                                        class="px-5 pb-5 flex items-start gap-16 w-full"
+                                                    >
+                                                        <div>
+                                                            <h3
+                                                                class="text-gray-900 font-light text-sm whitespace-nowrap"
+                                                            >
+                                                                Request URL
+                                                            </h3>
+                                                            <h5
+                                                                class="text-gray-700 pt-1 font-light text-sm"
+                                                            >
+                                                                STRING
+                                                            </h5>
+                                                        </div>
+                                                        <div class="w-full">
+                                                            <input
+                                                                type="text"
+                                                                disabled
+                                                                placeholder=""
+                                                                value="spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
+                                                                class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900 text-sm"
+                                                            />
+                                                            <h4 class="text-blue-600 font-light text-sm">
+                                                                REQUIRED
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="relative border-b border-black">
+                                            <button
+                                                type="button"
+                                                class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
+                                                @click="selected !== 3 ? selected = 3 : selected = null"
+                                            >
+                                                <div class="flex items-center justify-between">
+                                                    <span> Products </span>
+                                                    <i class="ri-arrow-down-s-line ri-lg"></i>
+                                                </div>
+                                            </button>
+
+                                            <div
+                                                class="relative overflow-hidden transition-all max-h-0 duration-700"
+                                                style=""
+                                                x-ref="container3"
+                                                x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
+                                            >
+                                                <div class="py-2">
+                                                    <div class="px-5 flex items-start gap-16 w-full">
+                                                        <div>
+                                                            <h3
+                                                                class="text-gray-900 font-light text-sm whitespace-nowrap"
+                                                            >
+                                                                Request URL
+                                                            </h3>
+                                                            <h5
+                                                                class="text-gray-600 pt-1 font-light text-sm"
+                                                            >
+                                                                STRING
+                                                            </h5>
+                                                        </div>
+                                                        <div class="w-full">
+                                                            <select
+                                                                name=""
+                                                                id=""
+                                                                class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900"
+                                                            >
+                                                                <option value="">rapidapi.com</option>
+                                                            </select>
+                                                            <div class="flex items-start gap-2">
+                                                                <h4 class="text-blue-600 font-light text-sm">
+                                                                    REQUIRED
+                                                                </h4>
+                                                                <p class="text-xs text-gray-900">
+                                                                    The cuisine(s) of the recipes. One or more
+                                                                    (comma separated) of the following: african,
+                                                                    chinese, japanese, korean, vietnamese, thai,
+                                                                    indian, british, irish, french, italian,
+                                                                    mexican, spanish, middle eastern, jewish,
+                                                                    american, cajun, southern, greek, german,
+                                                                    nordic, eastern european, caribbean, or
+                                                                    latin american.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="py-2 border-b border-black"
+                                                >
+                                                    <div
+                                                        class="px-5 pb-5 flex items-start gap-16 w-full"
+                                                    >
+                                                        <div>
+                                                            <h3
+                                                                class="text-gray-900 font-light text-sm whitespace-nowrap"
+                                                            >
+                                                                Request URL
+                                                            </h3>
+                                                            <h5
+                                                                class="text-gray-700 pt-1 font-light text-sm"
+                                                            >
+                                                                STRING
+                                                            </h5>
+                                                        </div>
+                                                        <div class="w-full">
+                                                            <input
+                                                                type="text"
+                                                                disabled
+                                                                placeholder=""
+                                                                value="spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
+                                                                class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900 text-sm"
+                                                            />
+                                                            <h4 class="text-blue-600 font-light text-sm">
+                                                                REQUIRED
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="relative border-b border-black">
+                                            <button
+                                                type="button"
+                                                class="w-full px-5 pt-2 pb-1 text-left border-b border-black"
+                                                @click="selected !== 5 ? selected = 5 : selected = null"
+                                            >
+                                                <div class="flex items-center justify-between">
+                                                    <span> Products </span>
+                                                    <i class="ri-arrow-down-s-line ri-lg"></i>
+                                                </div>
+                                            </button>
+
+                                            <div
+                                                class="relative overflow-hidden transition-all max-h-0 duration-700"
+                                                style=""
+                                                x-ref="container5"
+                                                x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''"
+                                            >
+                                                <div class="py-2">
+                                                    <div class="px-5 flex items-start gap-16 w-full">
+                                                        <div>
+                                                            <h3
+                                                                class="text-gray-900 font-light text-sm whitespace-nowrap"
+                                                            >
+                                                                Request URL
+                                                            </h3>
+                                                            <h5
+                                                                class="text-gray-600 pt-1 font-light text-sm"
+                                                            >
+                                                                STRING
+                                                            </h5>
+                                                        </div>
+                                                        <div class="w-full">
+                                                            <select
+                                                                name=""
+                                                                id=""
+                                                                class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900"
+                                                            >
+                                                                <option value="">rapidapi.com</option>
+                                                            </select>
+                                                            <div class="flex items-start gap-2">
+                                                                <h4 class="text-blue-600 font-light text-sm">
+                                                                    REQUIRED
+                                                                </h4>
+                                                                <p class="text-xs text-gray-900">
+                                                                    The cuisine(s) of the recipes. One or more
+                                                                    (comma separated) of the following: african,
+                                                                    chinese, japanese, korean, vietnamese, thai,
+                                                                    indian, british, irish, french, italian,
+                                                                    mexican, spanish, middle eastern, jewish,
+                                                                    american, cajun, southern, greek, german,
+                                                                    nordic, eastern european, caribbean, or
+                                                                    latin american.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="py-2 border-b border-black"
+                                                >
+                                                    <div
+                                                        class="px-5 pb-5 flex items-start gap-16 w-full"
+                                                    >
+                                                        <div>
+                                                            <h3
+                                                                class="text-gray-900 font-light text-sm whitespace-nowrap"
+                                                            >
+                                                                Request URL
+                                                            </h3>
+                                                            <h5
+                                                                class="text-gray-700 pt-1 font-light text-sm"
+                                                            >
+                                                                STRING
+                                                            </h5>
+                                                        </div>
+                                                        <div class="w-full">
+                                                            <input
+                                                                type="text"
+                                                                disabled
+                                                                placeholder=""
+                                                                value="spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
+                                                                class="border rounded-lg border-black py-1 px-2 w-full bg-gray-200 text-gray-900 text-sm"
+                                                            />
+                                                            <h4 class="text-blue-600 font-light text-sm">
+                                                                REQUIRED
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div
+                                class="lg:w-1/3 border-r border-blue-600 h-[450px] overflow-y-scroll"
+                            >
+                                <div
+                                    class="pt-[18px] border-b border-t lg:border-t-0 border-black px-5"
+                                >
+                                    <div class="flex items-center gap-5">
+                                        <a
+                                            href=""
+                                            class="text-sm text-gray-900 hover:text-blue-700 transition-all pb-4 border-b-2 border-blue-500"
+                                        >
+                                            Code Snippets
+                                        </a>
+                                        <a
+                                            href=""
+                                            class="text-sm text-gray-600 hover:text-blue-700 transition-all pb-4"
+                                        >
+                                            Results
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 px-5 pt-4">
+                                    <select
+                                        name=""
+                                        id=""
+                                        class="border rounded-lg border-black py-1 px-2 bg-gray-200 text-gray-900 w-52 text-xs"
+                                    >
+                                        <option value="">(Node.js) Axios</option>
+                                    </select>
+                                    <button
+                                        id="btn"
+                                        class="flex items-center gap-1 text-sky-400 text-sm"
+                                    >
+                                        <i class="ri-file-copy-line"></i>
+                                        Copy
+                                    </button>
+                                </div>
+                                <pre>
                     <code class="language-javascript" id="bar">
       const axios = require('axios');
 
@@ -1072,7 +961,7 @@
           'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
         }
       };
-      
+
       try {
         const response = await axios.request(options);
         console.log(response.data);
@@ -1080,709 +969,662 @@
         console.error(error);
       }
     </code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full hidden py-2 bg-white" id="tab5">
-            <div>
-              <h3 class="text-gray-900 text-2xl font-light text-center pt-6">
-                Choose the Right Plan For You
-              </h3>
-              <p class="text-gray-900 text-sm font-light text-center">
-                RapidAPI partners directly with API providers to give you
-                no-fuss, transparent pricing. Find a plan that best matches the
-                <br />
-                scale you need for your application.
-              </p>
-            </div>
-            <div class="">
-              <div class="relative px-4 py-4 mx-auto md:px-24 lg:px-8 lg:py-4">
-                <div class="grid gap-10 md:grid-cols-4 sm:mx-auto">
-                  <div>
-                    <div class="p-8 bg-gray-700 rounded">
-                      <div class="mb-4 text-center">
-                        <p class="text-xl font-medium tracking-wide text-white">
-                          Starter Plan
-                        </p>
-                        <div class="flex items-center justify-center">
-                          <p
-                            class="mr-2 text-5xl font-semibold text-white lg:text-6xl"
-                          >
-                            $39
-                          </p>
-                          <p class="text-lg text-gray-500">/ month</p>
+                            </div>
                         </div>
-                      </div>
-                      <ul class="mb-8 space-y-2">
-                        <li class="flex items-center">
-                          <div class="mr-3">
-                            <svg
-                              class="w-4 h-4 text-white"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-width="2"
-                            >
-                              <polyline
-                                fill="none"
-                                stroke="currentColor"
-                                points="6,12 10,16 18,8"
-                              ></polyline>
-                              <circle
-                                cx="12"
-                                cy="12"
-                                fill="none"
-                                r="11"
-                                stroke="currentColor"
-                              ></circle>
-                            </svg>
-                          </div>
-                          <p class="font-medium text-gray-300">
-                            10 deploys per day
-                          </p>
-                        </li>
-                        <li class="flex items-center">
-                          <div class="mr-3">
-                            <svg
-                              class="w-4 h-4 text-white"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-width="2"
-                            >
-                              <polyline
-                                fill="none"
-                                stroke="currentColor"
-                                points="6,12 10,16 18,8"
-                              ></polyline>
-                              <circle
-                                cx="12"
-                                cy="12"
-                                fill="none"
-                                r="11"
-                                stroke="currentColor"
-                              ></circle>
-                            </svg>
-                          </div>
-                          <p class="font-medium text-gray-300">
-                            10 GB of storage
-                          </p>
-                        </li>
-                        <li class="flex items-center">
-                          <div class="mr-3">
-                            <svg
-                              class="w-4 h-4 text-white"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-width="2"
-                            >
-                              <polyline
-                                fill="none"
-                                stroke="currentColor"
-                                points="6,12 10,16 18,8"
-                              ></polyline>
-                              <circle
-                                cx="12"
-                                cy="12"
-                                fill="none"
-                                r="11"
-                                stroke="currentColor"
-                              ></circle>
-                            </svg>
-                          </div>
-                          <p class="font-medium text-gray-300">3 domains</p>
-                        </li>
-                        <li class="flex items-center">
-                          <div class="mr-3">
-                            <svg
-                              class="w-4 h-4 text-white"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-width="2"
-                            >
-                              <polyline
-                                fill="none"
-                                stroke="currentColor"
-                                points="6,12 10,16 18,8"
-                              ></polyline>
-                              <circle
-                                cx="12"
-                                cy="12"
-                                fill="none"
-                                r="11"
-                                stroke="currentColor"
-                              ></circle>
-                            </svg>
-                          </div>
-                          <p class="font-medium text-gray-300">
-                            SSL Certificates
-                          </p>
-                        </li>
-                      </ul>
-                      <button
-                        type="submit"
-                        class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-gray-900 focus:shadow-outline focus:outline-none"
-                      >
-                        Get Now
-                      </button>
                     </div>
-                    <div
-                      class="w-11/12 h-2 mx-auto bg-gray-700 rounded-b opacity-75"
-                    ></div>
-                    <div
-                      class="w-10/12 h-2 mx-auto bg-gray-700 rounded-b opacity-50"
-                    ></div>
-                    <div
-                      class="w-9/12 h-2 mx-auto bg-gray-700 rounded-b opacity-25"
-                    ></div>
-                  </div>
-                  <div>
-                    <div class="p-8 bg-gray-700 rounded">
-                      <div class="mb-4 text-center">
-                        <p class="text-xl font-medium tracking-wide text-white">
-                          Starter Plan
+                </div>
+                <div class="w-full hidden py-2 bg-white" id="tab5">
+                    <div>
+                        <h3 class="text-gray-900 text-2xl font-light text-center pt-6">
+                            Choose the Right Plan For You
+                        </h3>
+                        <p class="text-gray-900 text-sm font-light text-center">
+                            RapidAPI partners directly with API providers to give you
+                            no-fuss, transparent pricing. Find a plan that best matches the
+                            <br/>
+                            scale you need for your application.
                         </p>
-                        <div class="flex items-center justify-center">
-                          <p
-                            class="mr-2 text-5xl font-semibold text-white lg:text-6xl"
-                          >
-                            $39
-                          </p>
-                          <p class="text-lg text-gray-500">/ month</p>
-                        </div>
-                      </div>
-                      <ul class="mb-8 space-y-2">
-                        <li class="flex items-center">
-                          <div class="mr-3">
-                            <svg
-                              class="w-4 h-4 text-white"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-width="2"
-                            >
-                              <polyline
-                                fill="none"
-                                stroke="currentColor"
-                                points="6,12 10,16 18,8"
-                              ></polyline>
-                              <circle
-                                cx="12"
-                                cy="12"
-                                fill="none"
-                                r="11"
-                                stroke="currentColor"
-                              ></circle>
-                            </svg>
-                          </div>
-                          <p class="font-medium text-gray-300">
-                            10 deploys per day
-                          </p>
-                        </li>
-                        <li class="flex items-center">
-                          <div class="mr-3">
-                            <svg
-                              class="w-4 h-4 text-white"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-width="2"
-                            >
-                              <polyline
-                                fill="none"
-                                stroke="currentColor"
-                                points="6,12 10,16 18,8"
-                              ></polyline>
-                              <circle
-                                cx="12"
-                                cy="12"
-                                fill="none"
-                                r="11"
-                                stroke="currentColor"
-                              ></circle>
-                            </svg>
-                          </div>
-                          <p class="font-medium text-gray-300">
-                            10 GB of storage
-                          </p>
-                        </li>
-                        <li class="flex items-center">
-                          <div class="mr-3">
-                            <svg
-                              class="w-4 h-4 text-white"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-width="2"
-                            >
-                              <polyline
-                                fill="none"
-                                stroke="currentColor"
-                                points="6,12 10,16 18,8"
-                              ></polyline>
-                              <circle
-                                cx="12"
-                                cy="12"
-                                fill="none"
-                                r="11"
-                                stroke="currentColor"
-                              ></circle>
-                            </svg>
-                          </div>
-                          <p class="font-medium text-gray-300">3 domains</p>
-                        </li>
-                        <li class="flex items-center">
-                          <div class="mr-3">
-                            <svg
-                              class="w-4 h-4 text-white"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-width="2"
-                            >
-                              <polyline
-                                fill="none"
-                                stroke="currentColor"
-                                points="6,12 10,16 18,8"
-                              ></polyline>
-                              <circle
-                                cx="12"
-                                cy="12"
-                                fill="none"
-                                r="11"
-                                stroke="currentColor"
-                              ></circle>
-                            </svg>
-                          </div>
-                          <p class="font-medium text-gray-300">
-                            SSL Certificates
-                          </p>
-                        </li>
-                      </ul>
-                      <button
-                        type="submit"
-                        class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-gray-900 focus:shadow-outline focus:outline-none"
-                      >
-                        Get Now
-                      </button>
                     </div>
-                    <div
-                      class="w-11/12 h-2 mx-auto bg-gray-700 rounded-b opacity-75"
-                    ></div>
-                    <div
-                      class="w-10/12 h-2 mx-auto bg-gray-700 rounded-b opacity-50"
-                    ></div>
-                    <div
-                      class="w-9/12 h-2 mx-auto bg-gray-700 rounded-b opacity-25"
-                    ></div>
-                  </div>
-                  <div>
-                    <div class="p-8 bg-gray-700 rounded">
-                      <div class="mb-4 text-center">
-                        <p class="text-xl font-medium tracking-wide text-white">
-                          Starter Plan
+                    <div class="">
+                        <div class="relative px-4 py-4 mx-auto md:px-24 lg:px-8 lg:py-4">
+                            <div class="grid gap-10 md:grid-cols-4 sm:mx-auto">
+                                <div>
+                                    <div class="p-8 bg-gray-700 rounded">
+                                        <div class="mb-4 text-center">
+                                            <p class="text-xl font-medium tracking-wide text-white">
+                                                Starter Plan
+                                            </p>
+                                            <div class="flex items-center justify-center">
+                                                <p
+                                                    class="mr-2 text-5xl font-semibold text-white lg:text-6xl"
+                                                >
+                                                    $39
+                                                </p>
+                                                <p class="text-lg text-gray-500">/ month</p>
+                                            </div>
+                                        </div>
+                                        <ul class="mb-8 space-y-2">
+                                            <li class="flex items-center">
+                                                <div class="mr-3">
+                                                    <svg
+                                                        class="w-4 h-4 text-white"
+                                                        viewBox="0 0 24 24"
+                                                        stroke-linecap="round"
+                                                        stroke-width="2"
+                                                    >
+                                                        <polyline
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            points="6,12 10,16 18,8"
+                                                        ></polyline>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            fill="none"
+                                                            r="11"
+                                                            stroke="currentColor"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <p class="font-medium text-gray-300">
+                                                    10 deploys per day
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <div class="mr-3">
+                                                    <svg
+                                                        class="w-4 h-4 text-white"
+                                                        viewBox="0 0 24 24"
+                                                        stroke-linecap="round"
+                                                        stroke-width="2"
+                                                    >
+                                                        <polyline
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            points="6,12 10,16 18,8"
+                                                        ></polyline>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            fill="none"
+                                                            r="11"
+                                                            stroke="currentColor"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <p class="font-medium text-gray-300">
+                                                    10 GB of storage
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <div class="mr-3">
+                                                    <svg
+                                                        class="w-4 h-4 text-white"
+                                                        viewBox="0 0 24 24"
+                                                        stroke-linecap="round"
+                                                        stroke-width="2"
+                                                    >
+                                                        <polyline
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            points="6,12 10,16 18,8"
+                                                        ></polyline>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            fill="none"
+                                                            r="11"
+                                                            stroke="currentColor"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <p class="font-medium text-gray-300">3 domains</p>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <div class="mr-3">
+                                                    <svg
+                                                        class="w-4 h-4 text-white"
+                                                        viewBox="0 0 24 24"
+                                                        stroke-linecap="round"
+                                                        stroke-width="2"
+                                                    >
+                                                        <polyline
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            points="6,12 10,16 18,8"
+                                                        ></polyline>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            fill="none"
+                                                            r="11"
+                                                            stroke="currentColor"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <p class="font-medium text-gray-300">
+                                                    SSL Certificates
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <button
+                                            type="submit"
+                                            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-gray-900 focus:shadow-outline focus:outline-none"
+                                        >
+                                            Get Now
+                                        </button>
+                                    </div>
+                                    <div
+                                        class="w-11/12 h-2 mx-auto bg-gray-700 rounded-b opacity-75"
+                                    ></div>
+                                    <div
+                                        class="w-10/12 h-2 mx-auto bg-gray-700 rounded-b opacity-50"
+                                    ></div>
+                                    <div
+                                        class="w-9/12 h-2 mx-auto bg-gray-700 rounded-b opacity-25"
+                                    ></div>
+                                </div>
+                                <div>
+                                    <div class="p-8 bg-gray-700 rounded">
+                                        <div class="mb-4 text-center">
+                                            <p class="text-xl font-medium tracking-wide text-white">
+                                                Starter Plan
+                                            </p>
+                                            <div class="flex items-center justify-center">
+                                                <p
+                                                    class="mr-2 text-5xl font-semibold text-white lg:text-6xl"
+                                                >
+                                                    $39
+                                                </p>
+                                                <p class="text-lg text-gray-500">/ month</p>
+                                            </div>
+                                        </div>
+                                        <ul class="mb-8 space-y-2">
+                                            <li class="flex items-center">
+                                                <div class="mr-3">
+                                                    <svg
+                                                        class="w-4 h-4 text-white"
+                                                        viewBox="0 0 24 24"
+                                                        stroke-linecap="round"
+                                                        stroke-width="2"
+                                                    >
+                                                        <polyline
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            points="6,12 10,16 18,8"
+                                                        ></polyline>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            fill="none"
+                                                            r="11"
+                                                            stroke="currentColor"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <p class="font-medium text-gray-300">
+                                                    10 deploys per day
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <div class="mr-3">
+                                                    <svg
+                                                        class="w-4 h-4 text-white"
+                                                        viewBox="0 0 24 24"
+                                                        stroke-linecap="round"
+                                                        stroke-width="2"
+                                                    >
+                                                        <polyline
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            points="6,12 10,16 18,8"
+                                                        ></polyline>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            fill="none"
+                                                            r="11"
+                                                            stroke="currentColor"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <p class="font-medium text-gray-300">
+                                                    10 GB of storage
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <div class="mr-3">
+                                                    <svg
+                                                        class="w-4 h-4 text-white"
+                                                        viewBox="0 0 24 24"
+                                                        stroke-linecap="round"
+                                                        stroke-width="2"
+                                                    >
+                                                        <polyline
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            points="6,12 10,16 18,8"
+                                                        ></polyline>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            fill="none"
+                                                            r="11"
+                                                            stroke="currentColor"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <p class="font-medium text-gray-300">3 domains</p>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <div class="mr-3">
+                                                    <svg
+                                                        class="w-4 h-4 text-white"
+                                                        viewBox="0 0 24 24"
+                                                        stroke-linecap="round"
+                                                        stroke-width="2"
+                                                    >
+                                                        <polyline
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            points="6,12 10,16 18,8"
+                                                        ></polyline>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            fill="none"
+                                                            r="11"
+                                                            stroke="currentColor"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <p class="font-medium text-gray-300">
+                                                    SSL Certificates
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <button
+                                            type="submit"
+                                            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-gray-900 focus:shadow-outline focus:outline-none"
+                                        >
+                                            Get Now
+                                        </button>
+                                    </div>
+                                    <div
+                                        class="w-11/12 h-2 mx-auto bg-gray-700 rounded-b opacity-75"
+                                    ></div>
+                                    <div
+                                        class="w-10/12 h-2 mx-auto bg-gray-700 rounded-b opacity-50"
+                                    ></div>
+                                    <div
+                                        class="w-9/12 h-2 mx-auto bg-gray-700 rounded-b opacity-25"
+                                    ></div>
+                                </div>
+                                <div>
+                                    <div class="p-8 bg-gray-700 rounded">
+                                        <div class="mb-4 text-center">
+                                            <p class="text-xl font-medium tracking-wide text-white">
+                                                Starter Plan
+                                            </p>
+                                            <div class="flex items-center justify-center">
+                                                <p
+                                                    class="mr-2 text-5xl font-semibold text-white lg:text-6xl"
+                                                >
+                                                    $39
+                                                </p>
+                                                <p class="text-lg text-gray-500">/ month</p>
+                                            </div>
+                                        </div>
+                                        <ul class="mb-8 space-y-2">
+                                            <li class="flex items-center">
+                                                <div class="mr-3">
+                                                    <svg
+                                                        class="w-4 h-4 text-white"
+                                                        viewBox="0 0 24 24"
+                                                        stroke-linecap="round"
+                                                        stroke-width="2"
+                                                    >
+                                                        <polyline
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            points="6,12 10,16 18,8"
+                                                        ></polyline>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            fill="none"
+                                                            r="11"
+                                                            stroke="currentColor"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <p class="font-medium text-gray-300">
+                                                    10 deploys per day
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <div class="mr-3">
+                                                    <svg
+                                                        class="w-4 h-4 text-white"
+                                                        viewBox="0 0 24 24"
+                                                        stroke-linecap="round"
+                                                        stroke-width="2"
+                                                    >
+                                                        <polyline
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            points="6,12 10,16 18,8"
+                                                        ></polyline>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            fill="none"
+                                                            r="11"
+                                                            stroke="currentColor"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <p class="font-medium text-gray-300">
+                                                    10 GB of storage
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <div class="mr-3">
+                                                    <svg
+                                                        class="w-4 h-4 text-white"
+                                                        viewBox="0 0 24 24"
+                                                        stroke-linecap="round"
+                                                        stroke-width="2"
+                                                    >
+                                                        <polyline
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            points="6,12 10,16 18,8"
+                                                        ></polyline>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            fill="none"
+                                                            r="11"
+                                                            stroke="currentColor"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <p class="font-medium text-gray-300">3 domains</p>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <div class="mr-3">
+                                                    <svg
+                                                        class="w-4 h-4 text-white"
+                                                        viewBox="0 0 24 24"
+                                                        stroke-linecap="round"
+                                                        stroke-width="2"
+                                                    >
+                                                        <polyline
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            points="6,12 10,16 18,8"
+                                                        ></polyline>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            fill="none"
+                                                            r="11"
+                                                            stroke="currentColor"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <p class="font-medium text-gray-300">
+                                                    SSL Certificates
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <button
+                                            type="submit"
+                                            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-gray-900 focus:shadow-outline focus:outline-none"
+                                        >
+                                            Get Now
+                                        </button>
+                                    </div>
+                                    <div
+                                        class="w-11/12 h-2 mx-auto bg-gray-700 rounded-b opacity-75"
+                                    ></div>
+                                    <div
+                                        class="w-10/12 h-2 mx-auto bg-gray-700 rounded-b opacity-50"
+                                    ></div>
+                                    <div
+                                        class="w-9/12 h-2 mx-auto bg-gray-700 rounded-b opacity-25"
+                                    ></div>
+                                </div>
+                                <div>
+                                    <div class="p-8 bg-gray-700 rounded">
+                                        <div class="mb-4 text-center">
+                                            <p class="text-xl font-medium tracking-wide text-white">
+                                                Starter Plan
+                                            </p>
+                                            <div class="flex items-center justify-center">
+                                                <p
+                                                    class="mr-2 text-5xl font-semibold text-white lg:text-6xl"
+                                                >
+                                                    $39
+                                                </p>
+                                                <p class="text-lg text-gray-500">/ month</p>
+                                            </div>
+                                        </div>
+                                        <ul class="mb-8 space-y-2">
+                                            <li class="flex items-center">
+                                                <div class="mr-3">
+                                                    <svg
+                                                        class="w-4 h-4 text-white"
+                                                        viewBox="0 0 24 24"
+                                                        stroke-linecap="round"
+                                                        stroke-width="2"
+                                                    >
+                                                        <polyline
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            points="6,12 10,16 18,8"
+                                                        ></polyline>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            fill="none"
+                                                            r="11"
+                                                            stroke="currentColor"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <p class="font-medium text-gray-300">
+                                                    10 deploys per day
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <div class="mr-3">
+                                                    <svg
+                                                        class="w-4 h-4 text-white"
+                                                        viewBox="0 0 24 24"
+                                                        stroke-linecap="round"
+                                                        stroke-width="2"
+                                                    >
+                                                        <polyline
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            points="6,12 10,16 18,8"
+                                                        ></polyline>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            fill="none"
+                                                            r="11"
+                                                            stroke="currentColor"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <p class="font-medium text-gray-300">
+                                                    10 GB of storage
+                                                </p>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <div class="mr-3">
+                                                    <svg
+                                                        class="w-4 h-4 text-white"
+                                                        viewBox="0 0 24 24"
+                                                        stroke-linecap="round"
+                                                        stroke-width="2"
+                                                    >
+                                                        <polyline
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            points="6,12 10,16 18,8"
+                                                        ></polyline>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            fill="none"
+                                                            r="11"
+                                                            stroke="currentColor"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <p class="font-medium text-gray-300">3 domains</p>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <div class="mr-3">
+                                                    <svg
+                                                        class="w-4 h-4 text-white"
+                                                        viewBox="0 0 24 24"
+                                                        stroke-linecap="round"
+                                                        stroke-width="2"
+                                                    >
+                                                        <polyline
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            points="6,12 10,16 18,8"
+                                                        ></polyline>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            fill="none"
+                                                            r="11"
+                                                            stroke="currentColor"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <p class="font-medium text-gray-300">
+                                                    SSL Certificates
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <button
+                                            type="submit"
+                                            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-gray-900 focus:shadow-outline focus:outline-none"
+                                        >
+                                            Get Now
+                                        </button>
+                                    </div>
+                                    <div
+                                        class="w-11/12 h-2 mx-auto bg-gray-700 rounded-b opacity-75"
+                                    ></div>
+                                    <div
+                                        class="w-10/12 h-2 mx-auto bg-gray-700 rounded-b opacity-50"
+                                    ></div>
+                                    <div
+                                        class="w-9/12 h-2 mx-auto bg-gray-700 rounded-b opacity-25"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-4">
+                        <h3 class="text-gray-900 text-2xl font-light text-center pt-6">
+                            Frequently Asked Questions
+                        </h3>
+                        <div class="flex flex-col items-center justify-center pt-2 gap-3 px-4">
+                            <div>
+                                <h4 class="text-sm text-gray-900 font-semibold">
+                                    Is my payment information secure?
+                                </h4>
+                                <p class="text-xs text-gray-900 font-light lg:w-[800px]">
+                                    Credit cards are processed through a PCI compliant banking
+                                    partner.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-900 font-semibold">
+                                    Is my payment information secure?
+                                </h4>
+                                <p class="text-xs text-gray-900 font-light lg:w-[800px]">
+                                    We work directly with API providers to implement clear,
+                                    transparent pricing for developers. The Provider may require
+                                    a credit card if a plan has a quota with an overage fee. If
+                                    you would no longer like to use the API, you can unsubscribe
+                                    from the plan at anytime by clicking the "unsubscribe"
+                                    button under the Billing section of the RapidAPI Dashboard.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-900 font-semibold">
+                                    What if I exceed my plan limits?
+                                </h4>
+                                <p class="text-xs text-gray-900 font-light lg:w-[800px]">
+                                    Depending on your plan's specification, you will either
+                                    incur overage charges or be suspended.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-900 font-semibold">
+                                    What if I exceed my plan limits?
+                                </h4>
+                                <p class="text-xs text-gray-900 font-light lg:w-[800px]">
+                                    Depending on your plan's specification, you will either
+                                    incur overage charges or be suspended.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-900 font-semibold">
+                                    What if I exceed my plan limits?
+                                </h4>
+                                <p class="text-xs text-gray-900 font-light lg:w-[800px]">
+                                    Depending on your plan's specification, you will either
+                                    incur overage charges or be suspended.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-gray-900 text-2xl font-light text-center pt-6">
+                            A Proven Platform With Scale
+                        </h3>
+                        <p class="text-gray-900 text-sm font-light text-center">
+                            Starting with the Recipe - Food - Nutrition API - you have
+                            access to an extensive ecosystem to accelerate your <br/>
+                            development process
                         </p>
-                        <div class="flex items-center justify-center">
-                          <p
-                            class="mr-2 text-5xl font-semibold text-white lg:text-6xl"
-                          >
-                            $39
-                          </p>
-                          <p class="text-lg text-gray-500">/ month</p>
-                        </div>
-                      </div>
-                      <ul class="mb-8 space-y-2">
-                        <li class="flex items-center">
-                          <div class="mr-3">
-                            <svg
-                              class="w-4 h-4 text-white"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-width="2"
-                            >
-                              <polyline
-                                fill="none"
-                                stroke="currentColor"
-                                points="6,12 10,16 18,8"
-                              ></polyline>
-                              <circle
-                                cx="12"
-                                cy="12"
-                                fill="none"
-                                r="11"
-                                stroke="currentColor"
-                              ></circle>
-                            </svg>
-                          </div>
-                          <p class="font-medium text-gray-300">
-                            10 deploys per day
-                          </p>
-                        </li>
-                        <li class="flex items-center">
-                          <div class="mr-3">
-                            <svg
-                              class="w-4 h-4 text-white"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-width="2"
-                            >
-                              <polyline
-                                fill="none"
-                                stroke="currentColor"
-                                points="6,12 10,16 18,8"
-                              ></polyline>
-                              <circle
-                                cx="12"
-                                cy="12"
-                                fill="none"
-                                r="11"
-                                stroke="currentColor"
-                              ></circle>
-                            </svg>
-                          </div>
-                          <p class="font-medium text-gray-300">
-                            10 GB of storage
-                          </p>
-                        </li>
-                        <li class="flex items-center">
-                          <div class="mr-3">
-                            <svg
-                              class="w-4 h-4 text-white"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-width="2"
-                            >
-                              <polyline
-                                fill="none"
-                                stroke="currentColor"
-                                points="6,12 10,16 18,8"
-                              ></polyline>
-                              <circle
-                                cx="12"
-                                cy="12"
-                                fill="none"
-                                r="11"
-                                stroke="currentColor"
-                              ></circle>
-                            </svg>
-                          </div>
-                          <p class="font-medium text-gray-300">3 domains</p>
-                        </li>
-                        <li class="flex items-center">
-                          <div class="mr-3">
-                            <svg
-                              class="w-4 h-4 text-white"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-width="2"
-                            >
-                              <polyline
-                                fill="none"
-                                stroke="currentColor"
-                                points="6,12 10,16 18,8"
-                              ></polyline>
-                              <circle
-                                cx="12"
-                                cy="12"
-                                fill="none"
-                                r="11"
-                                stroke="currentColor"
-                              ></circle>
-                            </svg>
-                          </div>
-                          <p class="font-medium text-gray-300">
-                            SSL Certificates
-                          </p>
-                        </li>
-                      </ul>
-                      <button
-                        type="submit"
-                        class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-gray-900 focus:shadow-outline focus:outline-none"
-                      >
-                        Get Now
-                      </button>
                     </div>
-                    <div
-                      class="w-11/12 h-2 mx-auto bg-gray-700 rounded-b opacity-75"
-                    ></div>
-                    <div
-                      class="w-10/12 h-2 mx-auto bg-gray-700 rounded-b opacity-50"
-                    ></div>
-                    <div
-                      class="w-9/12 h-2 mx-auto bg-gray-700 rounded-b opacity-25"
-                    ></div>
-                  </div>
-                  <div>
-                    <div class="p-8 bg-gray-700 rounded">
-                      <div class="mb-4 text-center">
-                        <p class="text-xl font-medium tracking-wide text-white">
-                          Starter Plan
-                        </p>
-                        <div class="flex items-center justify-center">
-                          <p
-                            class="mr-2 text-5xl font-semibold text-white lg:text-6xl"
-                          >
-                            $39
-                          </p>
-                          <p class="text-lg text-gray-500">/ month</p>
+                    <div class="grid lg:grid-cols-4 grid-cols-2">
+                        <div class="flex flex-col items-center justify-center">
+                            <i class="ri-user-3-fill ri-4x text-blue-600"></i>
+                            <h5 class="text-gray-900 text-2xl font-light -mt-4">300.000</h5>
+                            <p class="text-gray-900 text-center font-light text-sm">Developers</p>
                         </div>
-                      </div>
-                      <ul class="mb-8 space-y-2">
-                        <li class="flex items-center">
-                          <div class="mr-3">
-                            <svg
-                              class="w-4 h-4 text-white"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-width="2"
-                            >
-                              <polyline
-                                fill="none"
-                                stroke="currentColor"
-                                points="6,12 10,16 18,8"
-                              ></polyline>
-                              <circle
-                                cx="12"
-                                cy="12"
-                                fill="none"
-                                r="11"
-                                stroke="currentColor"
-                              ></circle>
-                            </svg>
-                          </div>
-                          <p class="font-medium text-gray-300">
-                            10 deploys per day
-                          </p>
-                        </li>
-                        <li class="flex items-center">
-                          <div class="mr-3">
-                            <svg
-                              class="w-4 h-4 text-white"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-width="2"
-                            >
-                              <polyline
-                                fill="none"
-                                stroke="currentColor"
-                                points="6,12 10,16 18,8"
-                              ></polyline>
-                              <circle
-                                cx="12"
-                                cy="12"
-                                fill="none"
-                                r="11"
-                                stroke="currentColor"
-                              ></circle>
-                            </svg>
-                          </div>
-                          <p class="font-medium text-gray-300">
-                            10 GB of storage
-                          </p>
-                        </li>
-                        <li class="flex items-center">
-                          <div class="mr-3">
-                            <svg
-                              class="w-4 h-4 text-white"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-width="2"
-                            >
-                              <polyline
-                                fill="none"
-                                stroke="currentColor"
-                                points="6,12 10,16 18,8"
-                              ></polyline>
-                              <circle
-                                cx="12"
-                                cy="12"
-                                fill="none"
-                                r="11"
-                                stroke="currentColor"
-                              ></circle>
-                            </svg>
-                          </div>
-                          <p class="font-medium text-gray-300">3 domains</p>
-                        </li>
-                        <li class="flex items-center">
-                          <div class="mr-3">
-                            <svg
-                              class="w-4 h-4 text-white"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-width="2"
-                            >
-                              <polyline
-                                fill="none"
-                                stroke="currentColor"
-                                points="6,12 10,16 18,8"
-                              ></polyline>
-                              <circle
-                                cx="12"
-                                cy="12"
-                                fill="none"
-                                r="11"
-                                stroke="currentColor"
-                              ></circle>
-                            </svg>
-                          </div>
-                          <p class="font-medium text-gray-300">
-                            SSL Certificates
-                          </p>
-                        </li>
-                      </ul>
-                      <button
-                        type="submit"
-                        class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-gray-900 focus:shadow-outline focus:outline-none"
-                      >
-                        Get Now
-                      </button>
+                        <div class="flex flex-col items-center justify-center">
+                            <i class="ri-organization-chart ri-4x text-blue-600"></i>
+                            <h5 class="text-gray-900 text-2xl font-light -mt-4">Thousands</h5>
+                            <p class="text-gray-900 text-center font-light text-sm">of Public APIs</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center">
+                            <i class="ri-phone-fill ri-4x text-blue-600"></i>
+                            <h5 class="text-gray-900 text-2xl font-light -mt-4">Billions</h5>
+                            <p class="text-gray-900 text-center font-light text-sm">of API Calls / Month</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center">
+                            <i class="ri-earth-fill ri-4x text-blue-600"></i>
+                            <h5 class="text-gray-900 text-2xl font-light -mt-4">175</h5>
+                            <p class="text-gray-900 text-center font-light text-sm">Countries served</p>
+                        </div>
                     </div>
-                    <div
-                      class="w-11/12 h-2 mx-auto bg-gray-700 rounded-b opacity-75"
-                    ></div>
-                    <div
-                      class="w-10/12 h-2 mx-auto bg-gray-700 rounded-b opacity-50"
-                    ></div>
-                    <div
-                      class="w-9/12 h-2 mx-auto bg-gray-700 rounded-b opacity-25"
-                    ></div>
-                  </div>
                 </div>
-              </div>
             </div>
-            <div class="py-4">
-              <h3 class="text-gray-900 text-2xl font-light text-center pt-6">
-                Frequently Asked Questions
-              </h3>
-              <div class="flex flex-col items-center justify-center pt-2 gap-3 px-4">
-                <div>
-                  <h4 class="text-sm text-gray-900 font-semibold">
-                    Is my payment information secure?
-                  </h4>
-                  <p class="text-xs text-gray-900 font-light lg:w-[800px]">
-                    Credit cards are processed through a PCI compliant banking
-                    partner.
-                  </p>
-                </div>
-                <div>
-                  <h4 class="text-sm text-gray-900 font-semibold">
-                    Is my payment information secure?
-                  </h4>
-                  <p class="text-xs text-gray-900 font-light lg:w-[800px]">
-                    We work directly with API providers to implement clear,
-                    transparent pricing for developers. The Provider may require
-                    a credit card if a plan has a quota with an overage fee. If
-                    you would no longer like to use the API, you can unsubscribe
-                    from the plan at anytime by clicking the "unsubscribe"
-                    button under the Billing section of the RapidAPI Dashboard.
-                  </p>
-                </div>
-                <div>
-                  <h4 class="text-sm text-gray-900 font-semibold">
-                    What if I exceed my plan limits?
-                  </h4>
-                  <p class="text-xs text-gray-900 font-light lg:w-[800px]">
-                    Depending on your plan's specification, you will either
-                    incur overage charges or be suspended.
-                  </p>
-                </div>
-                <div>
-                  <h4 class="text-sm text-gray-900 font-semibold">
-                    What if I exceed my plan limits?
-                  </h4>
-                  <p class="text-xs text-gray-900 font-light lg:w-[800px]">
-                    Depending on your plan's specification, you will either
-                    incur overage charges or be suspended.
-                  </p>
-                </div>
-                <div>
-                  <h4 class="text-sm text-gray-900 font-semibold">
-                    What if I exceed my plan limits?
-                  </h4>
-                  <p class="text-xs text-gray-900 font-light lg:w-[800px]">
-                    Depending on your plan's specification, you will either
-                    incur overage charges or be suspended.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-gray-900 text-2xl font-light text-center pt-6">
-                A Proven Platform With Scale
-              </h3>
-              <p class="text-gray-900 text-sm font-light text-center">
-                Starting with the Recipe - Food - Nutrition API - you have
-                access to an extensive ecosystem to accelerate your <br />
-                development process
-              </p>
-            </div>
-            <div class="grid lg:grid-cols-4 grid-cols-2">
-              <div class="flex flex-col items-center justify-center">
-                <i class="ri-user-3-fill ri-4x text-blue-600"></i>
-                <h5 class="text-gray-900 text-2xl font-light -mt-4">300.000</h5>
-                <p class="text-gray-900 text-center font-light text-sm">Developers</p>
-              </div>
-              <div class="flex flex-col items-center justify-center">
-                <i class="ri-organization-chart ri-4x text-blue-600"></i>
-                <h5 class="text-gray-900 text-2xl font-light -mt-4">Thousands</h5>
-                <p class="text-gray-900 text-center font-light text-sm">of Public APIs</p>
-              </div>
-              <div class="flex flex-col items-center justify-center">
-                <i class="ri-phone-fill ri-4x text-blue-600"></i>
-                <h5 class="text-gray-900 text-2xl font-light -mt-4">Billions</h5>
-                <p class="text-gray-900 text-center font-light text-sm">of API Calls / Month</p>
-              </div>
-              <div class="flex flex-col items-center justify-center">
-                <i class="ri-earth-fill ri-4x text-blue-600"></i>
-                <h5 class="text-gray-900 text-2xl font-light -mt-4">175</h5>
-                <p class="text-gray-900 text-center font-light text-sm">Countries served</p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
-    <footer class="py-2 px-3 bg-[#0177ff] text-white font-semibold text-sm mt-auto">
-        <div class="container mx-auto">
-            <div class="flex items-center justify-between pb-3 border-b border-white">
-                <p><a href="">Home</a> > <a href="">Recipe Food Nutrition</a></p>
-                <div>
-                    <span>Language:</span>
-                    <select name="" id="" class="bg-inherit">
-                        <option value="">English</option>
-                        <option value="">Turkish</option>
-                    </select>
-                </div>
-            </div>
-            <div class="flex flex-col lg:flex-row items-center justify-between pt-2">
-                <div class="flex flex-col lg:flex-row items-center lg:gap-8 gap-2">
-                    <p>© 2023 APIWIZZ. All Right Reserved.</p>
-                    <ul class="flex flex-wrap items-center gap-3">
-                        <li><a href="">About</a></li>
-                        <li><a href="">Blog</a></li>
-                        <li><a href="">Learn</a></li>
-                        <li><a href="">Careers</a></li>
-                        <li><a href="">Press</a></li>
-                    </ul>
-                </div>
-                <div class="flex items-center gap-3 lg:py-0 py-2">
-                    <a href="" class="py-1 px-2 rounded-full bg-white"><i class="ri-facebook-fill text-black"></i></a>
-                    <a href="" class="py-1 px-2 rounded-full bg-white"><i class="ri-twitter-fill text-black"></i></a>
-                    <a href="" class="py-1 px-2 rounded-full bg-white"><i class="ri-linkedin-fill text-black"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    @vite('/resources/js/jquery.min.js')
-    @vite('/resources/js/swiper-bundle.min.js')
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
-    @vite('/resources/js/main.js')
-    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
-    <script>
-      var btn = document.querySelector("#btn");
-
-      btn.addEventListener("click", () => {
-        const textCopied = ClipboardJS.copy(document.querySelector("#bar"));
-        console.log("copied!", textCopied);
-      });
-    </script>
-  </body>
-</body>
-</html>
+@endsection

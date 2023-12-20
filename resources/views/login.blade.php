@@ -24,10 +24,10 @@
                 class="absolute inset-0 bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
             </div>
             <div class="text-white relative px-4 py-10 bg-[#0177ff] shadow-lg sm:rounded-3xl sm:p-20">
-    
+
                 <div class="text-center pb-6">
                     <h1 class="text-3xl">Login</h1>
-    
+
                     <p class="text-gray-300">
                         Welcome Back!
                     </p>
@@ -57,22 +57,22 @@
                     <span class="border-b w-1/5 lg:w-1/4"></span>
                 </div>
                 <form>
-    
+
                     <input
                             class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             type="mail" placeholder="E-Mail" name="name">
-    
+
                     <input
                             class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             type="password" placeholder="Password" name="email">
-    
+
                     <div class="flex justify-center">
                         <input
                             class="shadow bg-white text-gray-900 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                             type="submit" value="Login">
-                       
+
                     </div>
-    
+
                 </form>
             </div>
         </div>
