@@ -97,31 +97,31 @@
             >
                 <a
                     href="#tab1"
-                    class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2 border-b-2 border-blue-500"
+                    class="text-white hover:text-gray-200 font-semibold transition-all pb-2 border-b-2 border-blue-500"
                 >
                     Endpoints
                 </a>
                 <a
                     href="#tab2"
-                    class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2"
+                    class="text-white hover:text-gray-200 font-semibold transition-all pb-2"
                 >
                     About
                 </a>
                 <a
                     href="#tab3"
-                    class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2"
+                    class="text-white hover:text-gray-200 font-semibold transition-all pb-2"
                 >
                     Tutorials
                 </a>
                 <a
                     href="#tab4"
-                    class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2"
+                    class="text-white hover:text-gray-200 font-semibold transition-all pb-2"
                 >
                     Discussions
                 </a>
                 <a
                     href="#tab5"
-                    class="text-sm text-gray-200 hover:text-blue-700 transition-all pb-2"
+                    class="text-white hover:text-gray-200 font-semibold transition-all pb-2"
                 >
                     Pricing
                 </a>
@@ -132,7 +132,12 @@
                         The spoonacular Recipe - Food - Nutrition API gives you to access
                         to thousands of recipes, storeboug
                     </p>
+                    
                     <div class="bg-white pt-4 mt-2 border-b border-black">
+                        <div class="pb-3 px-14 text-center text-gray-900">
+                            <h1 class="font-semibold text-lg">Başlık</h1>
+                            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error aut deserunt ut tenetur vero fugiat eaque, officiis labore reiciendis molestias distinctio asperiores ab nemo voluptatem atque aperiam. Velit, enim sit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio minima nulla maxime quod sapiente, sed ducimus praesentium et enim doloribus reiciendis veniam eius iusto aperiam. A omnis ex adipisci accusantium?</p>
+                        </div>
                         <div class="px-4 border-b border-black pb-2">
                             <select
                                 name=""
@@ -143,9 +148,9 @@
                                 <option value="">V1 (Current)</option>
                             </select>
                         </div>
-                        <div class="lg:flex">
+                        <div class="lg:flex h-[75vh]">
                             <div
-                                class="lg:w-1/3 border-r border-blue-600 h-[450px] overflow-y-scroll"
+                                class="lg:w-1/3 border-r border-blue-600  overflow-y-scroll"
                             >
                                 <div class="py-3 border-b border-black">
                                     <div
@@ -406,7 +411,7 @@
                                 </div>
                             </div>
                             <div
-                                class="lg:w-1/3 border-r border-blue-600 h-[450px] overflow-y-scroll"
+                                class="lg:w-1/3 border-r border-blue-600  overflow-y-scroll"
                             >
                                 <div
                                     class="py-3 border-b border-t lg:border-t-0 border-black px-5"
@@ -818,7 +823,7 @@
                                 </div>
                             </div>
                             <div
-                                class="lg:w-1/3 border-r border-blue-600 h-[450px] overflow-y-scroll"
+                                class="lg:w-1/3 border-r border-blue-600  overflow-y-scroll"
                             >
                                 <div
                                     class="pt-[18px] border-b border-t lg:border-t-0 border-black px-5"

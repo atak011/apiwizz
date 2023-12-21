@@ -15,6 +15,7 @@
     @vite('resources/css/default.css')
     @vite('resources/css/swiper.css')
     @vite('resources/css/swiper-bundle.min.css')
+    @vite('resources/css/prism.min.css')
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
@@ -138,6 +139,9 @@
 </footer>
 @vite('resources/js/jquery.min.js')
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 @vite('resources/js/main.js')
 </body>
 

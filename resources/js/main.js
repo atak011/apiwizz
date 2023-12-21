@@ -50,4 +50,11 @@
     },
   });
 
+  var btn = document.querySelector("#btn");
+
+      btn.addEventListener("click", () => {
+        const textCopied = ClipboardJS.copy(document.querySelector("#bar"));
+        console.log("copied!", textCopied);
+      });
+
 
