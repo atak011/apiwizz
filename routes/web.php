@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +30,8 @@ Route::get('/product-detail', function () {
 
 Route::get('/user-panel', function () {
     return view('user-panel');
+});
+
+Route::get('/oauth/{provider}/activate', function (Request $request, $provider) {
+    return Socialite::driver($provider)->redirect();
 });

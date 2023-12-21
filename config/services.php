@@ -31,4 +31,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'github' => [
+        'client_id' => 'baaf7221a12705636b6d',
+        'client_secret' => '62e027a1ad59db6b5e224f12353ea46811308fa7',
+        'redirect' => 'https://apiwizz.com/oauth/github/callback'
+    ],
+
 ];
