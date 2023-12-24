@@ -32,6 +32,10 @@ Route::get('/user-panel', function () {
     return view('user-panel');
 });
 
+Route::get('/about-us', function () {
+    return view('about-us');
+});
+
 Route::get('/oauth/{provider}/activate', function (Request $request, $provider) {
     return Socialite::driver($provider)->redirect();
 });
