@@ -97,31 +97,31 @@
             >
                 <a
                     href="#tab1"
-                    class="text-white hover:text-gray-200 font-semibold transition-all pb-2 border-b-2 border-blue-500"
+                    class="text-white hover:text-gray-200 font-semibold transition-all pb-2 border-b-2 border-blue-500 lg:text-base text-xs"
                 >
                     Endpoints
                 </a>
                 <a
                     href="#tab2"
-                    class="text-white hover:text-gray-200 font-semibold transition-all pb-2"
+                    class="text-white hover:text-gray-200 font-semibold transition-all pb-2 lg:text-base text-xs"
                 >
                     About
                 </a>
                 <a
                     href="#tab3"
-                    class="text-white hover:text-gray-200 font-semibold transition-all pb-2"
+                    class="text-white hover:text-gray-200 font-semibold transition-all pb-2 lg:text-base text-xs"
                 >
                     Tutorials
                 </a>
                 <a
                     href="#tab4"
-                    class="text-white hover:text-gray-200 font-semibold transition-all pb-2"
+                    class="text-white hover:text-gray-200 font-semibold transition-all pb-2 lg:text-base text-xs"
                 >
                     Discussions
                 </a>
                 <a
                     href="#tab5"
-                    class="text-white hover:text-gray-200 font-semibold transition-all pb-2"
+                    class="text-white hover:text-gray-200 font-semibold transition-all pb-2 lg:text-base text-xs"
                 >
                     Pricing
                 </a>
@@ -148,9 +148,9 @@
                                 <option value="">V1 (Current)</option>
                             </select>
                         </div>
-                        <div class="lg:flex h-[75vh]">
+                        <div class="lg:flex lg:h-[75vh]">
                             <div
-                                class="lg:w-1/3 border-r border-blue-600  overflow-y-scroll"
+                                class="lg:w-1/3 border-r border-blue-600  overflow-y-scroll h-[450px] lg:h-full"
                             >
                                 <div class="py-3 border-b border-black">
                                     <div
@@ -411,7 +411,7 @@
                                 </div>
                             </div>
                             <div
-                                class="lg:w-1/3 border-r border-blue-600  overflow-y-scroll"
+                                class="lg:w-1/3 border-r border-blue-600  overflow-y-scroll h-[450px] lg:h-full"
                             >
                                 <div
                                     class="py-3 border-b border-t lg:border-t-0 border-black px-5"
@@ -823,7 +823,7 @@
                                 </div>
                             </div>
                             <div
-                                class="lg:w-1/3 border-r border-blue-600  overflow-y-scroll"
+                                class="lg:w-1/3 border-r border-blue-600  overflow-y-scroll h-[450px] lg:h-full"
                             >
                                 <div
                                     class="pt-[18px] border-b border-t lg:border-t-0 border-black px-5"
